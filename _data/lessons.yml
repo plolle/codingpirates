@@ -10,7 +10,7 @@
   dir: 02-begynder
   title: BEGYNDER
   subtitle: Behaviors og collision masks
-  ready: false
+  ready: true
 
 - num: 3
   dir: 03-middel-events
