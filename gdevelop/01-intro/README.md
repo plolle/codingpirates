@@ -183,3 +183,8 @@ Sæt et flueben ved hver ting, du har klaret:
 | Jeg kan ikke finde mit projekt igen | **A:** kig i mappen fra Opgave 2. **B:** log ind, og find det under **Build**. |
 | Jeg trykkede **Add all assets to my scene** to gange | Så har du hver figur to gange. Slet dubletterne i **Objects**-panelet: højreklik på objektet, og vælg **Delete**. |
 | Figurerne står ikke i scenen | Det er meningen! Vi placerer dem i næste del af kurset. |
+
+---
+
+Opgaverne bygger på det oprindelige GDevelop-forløb fra
+[mom2day.dk/gdevelop](https://mom2day.dk/gdevelop). 🙏

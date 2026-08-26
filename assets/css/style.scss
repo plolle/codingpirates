@@ -226,6 +226,21 @@ body {
 .content li input[type="checkbox"] { margin-right: 0.45em; }
 .content ul:has(input[type="checkbox"]) { list-style: none; padding-left: 0.2em; }
 
+/* ---------- Kom-i-gang-knap paa forsiden ---------- */
+.content .cta { margin: 1.8em 0 0.5em; }
+.content .cta a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(9,105,218,0.3);
+}
+.content .cta a:hover { background: #0757ba; }
+
 /* ---------- Forrige / naeste ---------- */
 .pager {
   display: flex;
