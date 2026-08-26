@@ -1,0 +1,25 @@
+title: GDevelop — byg dit eget platformspil
+description: Spilkursus til Coding Pirates
+lang: da
+
+theme: jekyll-theme-minimal
+
+plugins:
+  - jekyll-readme-index        # bruger hver mappes README.md som forside
+  - jekyll-relative-links      # gør links som "01-intro/" til rigtige links
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+# Uden dette springer Jekyll README.md over, og alle lektionsmapper ville give 404.
+readme_index:
+  remove_originals: true
+  with_frontmatter: true
+
+relative_links:
+  enabled: true
+  collections: false
+
+# Vises ikke paa sitet - kun i repoet
+exclude:
+  - tools
+  - .gitignore

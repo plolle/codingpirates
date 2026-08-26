@@ -1,0 +1,61 @@
+---
+# Tom front matter kraeves, saa Jekyll behandler filen som SCSS
+---
+
+@import "{{ site.theme }}";
+
+/* Skaermbillederne er op til 1920px brede. Uden dette flyder de ud over siden. */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.2em 0;
+  border-radius: 6px;
+  border: 1px solid #d8d8d8;
+}
+
+/* Lidt mere plads til indholdet, saa billederne ikke bliver for smaa */
+section {
+  max-width: 980px;
+}
+
+@media print, screen and (min-width: 961px) {
+  div.wrapper {
+    max-width: 1360px;
+  }
+}
+
+/* Brede tabeller skal kunne rulles i stedet for at sprænge siden */
+table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.5em 0.8em;
+  border: 1px solid #e2e2e2;
+  text-align: left;
+}
+
+/* Citatblokke bruges til tips og advarsler i lektionerne */
+blockquote {
+  border-left: 4px solid #f5b800;
+  background: #fffaf0;
+  padding: 0.6em 1em;
+  margin: 1.2em 0;
+  color: #444;
+  font-style: normal;
+}
+
+/* Tjeklisterne i slutningen af hver lektion */
+ul li input[type="checkbox"] {
+  margin-right: 0.4em;
+}
+
+h2 {
+  margin-top: 1.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaeaea;
+}
