@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<button class="nav-toggle" aria-label="Vis eller skjul menuen" aria-expanded="false">☰ Menu</button>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <a class="brand" href="{{ '/gdevelop/' | relative_url }}">
+      <span class="brand-icon">🎮</span>
+      <span class="brand-text">
+        <strong>GDevelop</strong>
+        <small>Byg dit eget platformspil</small>
+      </span>
+    </a>
+
+    <nav class="lessons" aria-label="Lektioner">
+      <h2 class="nav-heading">Lektioner</h2>
+      <ol>
+        {% for lesson in site.data.lessons %}
+          {% assign target = '/gdevelop/' | append: lesson.dir | append: '/' | relative_url %}
+          {% if page.url contains lesson.dir %}{% assign state = 'active' %}
+          {% elsif lesson.ready %}{% assign state = 'ready' %}
+          {% else %}{% assign state = 'todo' %}{% endif %}
+          <li class="{{ state }}">
+            {% if lesson.ready %}
+              <a href="{{ target }}"{% if state == 'active' %} aria-current="page"{% endif %}>
+                <span class="num">{{ lesson.num }}</span>
+                <span class="label">
+                  <span class="t">{{ lesson.title }}</span>
+                  <span class="s">{{ lesson.subtitle }}</span>
+                </span>
+              </a>
+            {% else %}
+              <span class="disabled" title="Denne lektion er ikke skrevet endnu">
+                <span class="num">{{ lesson.num }}</span>
+                <span class="label">
+                  <span class="t">{{ lesson.title }}</span>
+                  <span class="s">{{ lesson.subtitle }}</span>
+                </span>
+              </span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+
+    <nav class="toc" aria-label="Indhold på denne side" hidden>
+      <h2 class="nav-heading">På denne side</h2>
+      <ul></ul>
+    </nav>
+
+    <div class="sidebar-foot">
+      <a href="https://github.com/{{ site.github.repository_nwo | default: 'plolle/codingpirates' }}">Se projektet på GitHub</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    {{ content }}
+
+    {% comment %}Forrige/naeste-navigation, udregnet ud fra lessons.yml{% endcomment %}
+    {% assign ready = site.data.lessons | where: 'ready', true %}
+    {% assign prev = nil %}{% assign next = nil %}{% assign found = false %}
+    {% for lesson in ready %}
+      {% if page.url contains lesson.dir %}{% assign found = true %}
+      {% elsif found and next == nil %}{% assign next = lesson %}
+      {% elsif found == false %}{% assign prev = lesson %}
+      {% endif %}
+    {% endfor %}
+    {% if found and prev or found and next %}
+    <nav class="pager">
+      {% if prev %}<a class="prev" href="{{ '/gdevelop/' | append: prev.dir | append: '/' | relative_url }}"><small>Forrige</small>{{ prev.title }}</a>{% endif %}
+      {% if next %}<a class="next" href="{{ '/gdevelop/' | append: next.dir | append: '/' | relative_url }}"><small>Næste</small>{{ next.title }}</a>{% endif %}
+    </nav>
+    {% endif %}
+  </main>
+
+</div>
+
+<script>
+(function () {
+  // Byg "Paa denne side" ud fra overskrifterne i indholdet
+  var content = document.querySelector('.content');
+  var toc = document.querySelector('.toc');
+  if (content && toc) {
+    var list = toc.querySelector('ul');
+    var heads = content.querySelectorAll('h2');
+    var n = 0;
+    heads.forEach(function (h) {
+      if (!h.id) { return; }
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent.replace(/\s*[✅🟡👉]\s*$/, '').trim();
+      li.appendChild(a);
+      list.appendChild(li);
+      n++;
+    });
+    if (n > 1) { toc.hidden = false; }
+
+    // Marker det afsnit man er i
+    var links = list.querySelectorAll('a');
+    if ('IntersectionObserver' in window && links.length) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) { return; }
+          links.forEach(function (l) {
+            l.parentElement.classList.toggle('here', l.getAttribute('href') === '#' + e.target.id);
+          });
+        });
+      }, { rootMargin: '-10% 0px -75% 0px' });
+      heads.forEach(function (h) { if (h.id) { obs.observe(h); } });
+    }
+  }
+
+  // Menuknap paa smaa skaerme
+  var btn = document.querySelector('.nav-toggle');
+  var side = document.querySelector('.sidebar');
+  if (btn && side) {
+    btn.addEventListener('click', function () {
+      var open = side.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    side.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A' && window.innerWidth < 900) {
+        side.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

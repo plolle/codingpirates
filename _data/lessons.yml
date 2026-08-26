@@ -1,0 +1,61 @@
+# Lektionerne i kurset, i den rækkefølge de skal tages.
+# ready: false gør punktet grået ud i menuen, indtil lektionen er skrevet.
+- num: 1
+  dir: 01-intro
+  title: INTRO
+  subtitle: Kom i gang og hent grafikken
+  ready: true
+
+- num: 2
+  dir: 02-begynder
+  title: BEGYNDER
+  subtitle: Behaviors og collision masks
+  ready: false
+
+- num: 3
+  dir: 03-middel-events
+  title: MIDDEL – EVENTS
+  subtitle: Få helten til at bevæge sig
+  ready: false
+
+- num: 4
+  dir: 04-middel-variabler
+  title: MIDDEL – VARIABLER
+  subtitle: Mønter og score
+  ready: false
+
+- num: 5
+  dir: 05-middel-fjender
+  title: MIDDEL – FJENDER
+  subtitle: Fjender på patrulje
+  ready: false
+
+- num: 6
+  dir: 06-advanced-scener
+  title: ADVANCED – SCENER
+  subtitle: Menu, flere baner og You Win
+  ready: false
+
+- num: 7
+  dir: 07-advanced-you-lose
+  title: ADVANCED – YOU LOSE
+  subtitle: You Lose og Try again
+  ready: false
+
+- num: 8
+  dir: 08-advanced-camera
+  title: ADVANCED – CAMERA
+  subtitle: Kameraet følger helten
+  ready: false
+
+- num: 9
+  dir: 09-advanced-door
+  title: ADVANCED – DOOR
+  subtitle: Døren der kræver mønter
+  ready: false
+
+- num: 10
+  dir: 10-advanced-liv
+  title: ADVANCED – LIV
+  subtitle: Hjerter og ekstra liv
+  ready: false

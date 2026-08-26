@@ -2,13 +2,17 @@ title: GDevelop — byg dit eget platformspil
 description: Spilkursus til Coding Pirates
 lang: da
 
-theme: jekyll-theme-minimal
+url: https://plolle.github.io
+baseurl: /codingpirates
+
+# Ingen theme: layoutet ligger i _layouts/default.html og stilen i
+# assets/css/style.scss, saa der er fuld kontrol over bredde og menu.
 
 plugins:
   - jekyll-readme-index        # bruger hver mappes README.md som forside
   - jekyll-relative-links      # gør links som "01-intro/" til rigtige links
   - jekyll-optional-front-matter
-  - jekyll-titles-from-headings
+  - jekyll-titles-from-headings  # giver hver side en titel ud fra dens overskrift
 
 # Uden dette springer Jekyll README.md over, og alle lektionsmapper ville give 404.
 readme_index:
@@ -18,6 +22,12 @@ readme_index:
 relative_links:
   enabled: true
   collections: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 # Vises ikke paa sitet - kun i repoet
 exclude:
