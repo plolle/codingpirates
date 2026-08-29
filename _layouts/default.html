@@ -84,8 +84,43 @@
 
 </div>
 
+<div class="lightbox" hidden>
+  <button class="lightbox-close" aria-label="Luk billedet">&times;</button>
+  <img alt="">
+</div>
+
 <script>
 (function () {
+  // Klik paa et skaermbillede for at se det i fuld stoerrelse
+  var box = document.querySelector('.lightbox');
+  var boxImg = box && box.querySelector('img');
+  var content = document.querySelector('.content');
+  if (box && boxImg && content) {
+    var open = function (src, alt) {
+      boxImg.src = src;
+      boxImg.alt = alt || '';
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+    };
+    var close = function () {
+      box.hidden = true;
+      boxImg.removeAttribute('src');
+      document.body.style.overflow = '';
+    };
+    content.querySelectorAll('img').forEach(function (im) {
+      im.classList.add('zoomable');
+      im.setAttribute('tabindex', '0');
+      im.setAttribute('role', 'button');
+      im.setAttribute('title', 'Klik for at se billedet stort');
+      im.addEventListener('click', function () { open(im.currentSrc || im.src, im.alt); });
+      im.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(im.currentSrc || im.src, im.alt); }
+      });
+    });
+    box.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) { close(); } });
+  }
+
   // Byg "Paa denne side" ud fra overskrifterne i indholdet
   var content = document.querySelector('.content');
   var toc = document.querySelector('.toc');
