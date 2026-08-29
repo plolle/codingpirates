@@ -1,27 +1,28 @@
 # Originale skærmbilleder — uden markeringer
 
-Disse filer er de rå skærmbilleder, præcis som de blev hentet, uden gule kasser og tal.
+Disse filer er de rå skærmbilleder, præcis som de blev taget, uden gule kasser og tal.
 De bruges ikke af lektionen — de ligger her, så markeringerne altid kan fortrydes.
 
-## Fortryd markeringerne (tilbage til rå billeder)
-
-```powershell
-Copy-Item "c:\Sandbox\Privat\codingpirates\gdevelop\01-intro\images\original\*.png" `
-          "c:\Sandbox\Privat\codingpirates\gdevelop\01-intro\images\" -Force
-```
-
-Bemærk: `05-objects-list.png` findes kun som markeret udgave. Den er lavet ud fra
-`05-save-as.png` med en anden markering. Efter en fortrydelse skal den laves igen:
-
-```powershell
-& "c:\Sandbox\Privat\codingpirates\tools\Annotate-Screenshot.ps1" `
-    -In  ".\original\05-save-as.png" `
-    -Out ".\05-objects-list.png" `
-    -Box "1578,100,336,700,1"
-```
+Billederne er taget i browserudgaven på editor.gdevelop.io i august 2026.
+E-mailadresse og navnet på et privat projekt er maskeret væk med en ensfarvet firkant.
 
 ## Lav markeringerne igen
 
-Alle kommandoerne for denne lektion står i
-[`tools/annotate-01-intro.ps1`](../../../tools/annotate-01-intro.ps1).
-Kør det script, og alle markeringer bliver lavet forfra ud fra `original\`.
+```powershell
+& "c:\Sandbox\Privat\codingpirates\tools\annotate-01-intro.ps1"
+```
+
+Scriptet laver alle markeringer forfra ud fra denne mappe og kopierer de billeder,
+der ikke skal markeres, uændret over. Koordinaterne står som kommentarer i scriptet.
+
+## Fortryd markeringerne helt
+
+```powershell
+Copy-Item ".\*.png" ".." -Force
+```
+
+## Tag nye skærmbilleder
+
+`tools\import-01-intro-shots.ps1` henter skærmbilleder ind, konverterer til PNG og
+maskerer de områder, der ikke må offentliggøres. Skiftes et billede ud, skal
+koordinaterne i `annotate-01-intro.ps1` måles om.
