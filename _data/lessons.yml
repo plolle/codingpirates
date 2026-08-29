@@ -27,8 +27,8 @@
 - num: 5
   dir: 05-middel-fjender
   title: MIDDEL – FJENDER
-  subtitle: Fjender på patrulje
-  ready: false
+  subtitle: Monster på patrulje
+  ready: true
 
 - num: 6
   dir: 06-advanced-scener
