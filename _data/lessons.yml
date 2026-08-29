@@ -21,8 +21,8 @@
 - num: 4
   dir: 04-middel-variabler
   title: MIDDEL – VARIABLER
-  subtitle: Mønter og score
-  ready: false
+  subtitle: Score med globale variabler
+  ready: true
 
 - num: 5
   dir: 05-middel-fjender
