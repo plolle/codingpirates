@@ -133,25 +133,26 @@ Variablen tæller nu, men spilleren kan ikke se den. Det retter vi.
 3. I feltet **Text** skriver du præcis dette:
 
 ```
-"Score: " + ToString(Variable(Score))
+"Score: " + Score
 ```
 
 4. Tryk **Ok**.
-
-![Actionen Change the text med udtrykket Score plus ToString Variable Score](images/10-text-expression.png)
 
 ### Hvad betyder den linje?
 
 | Del | Betydning |
 |---|---|
 | `"Score: "` | Almindelig tekst. Alt mellem **anførselstegn** vises præcis som det står. |
-| `+` | Sætter to tekststykker sammen |
-| `Variable(Score)` | Henter **tallet** fra variablen `Score` |
-| `ToString(...)` | Laver tallet om til **tekst**, så det kan sættes sammen med resten |
+| `+` | Sætter de to stykker sammen |
+| `Score` | Henter **tallet** fra din variabel |
 
-> 💡 `ToString` er nødvendig, fordi et tal og en tekst ikke er det samme for computeren.
-> `7` er et tal, du kan regne med. `"7"` er et tegn, du kan skrive. Uden `ToString` klager
-> GDevelop.
+> 💡 Du skriver bare variablens navn — `Score`. GDevelop kan selv se, at det er et tal, og
+> laver det om til tekst, fordi det står sammen med noget tekst.
+
+> ⚠️ **Derfor hedder tekstobjektet `ScoreText`.** Havde du kaldt det `Score` ligesom
+> variablen, ville GDevelop ikke kunne se, om `Score` betød objektet eller variablen.
+
+![Actionen Change the text med udtrykket Score plus variablen Score](images/10-text-expression.png)
 
 ---
 
@@ -163,7 +164,7 @@ De tre nye events, du har lavet i denne lektion:
 |---|---|---|
 | 1 | **At the beginning of the scene** | Change the variable `Score`: **set to** `0` |
 | 2 | `Red_hero` **is in collision with** `Coin` | Delete `Coin`<br>Change the variable `Score`: **add** `1` |
-| 3 | *(ingen — kører hele tiden)* | Change the text of `ScoreText`: set to `"Score: " + ToString(Variable(Score))` |
+| 3 | *(ingen — kører hele tiden)* | Change the text of `ScoreText`: set to `"Score: " + Score` |
 
 ![Den færdige Events-side med alle events fra lektion 3 og 4](images/11-finished-events.png)
 
@@ -222,7 +223,8 @@ Nu kører actionerne **én gang for hver mønt**, den rørte ved — og så pass
 | Der står stadig **Score: 0**, selvom mønterne forsvinder | Event 3 mangler, eller udtrykket er skrevet forkert. Tjek anførselstegn og parenteser. |
 | Tallet står altid på **1** | **Modification's sign** står på **= (set to)**. Den skal være **+ (add)**. |
 | Mønterne forsvinder ikke | Conditionen peger måske på det forkerte objekt. Den skal være `Red_hero` **i collision med** `Coin`. |
-| GDevelop siger, udtrykket er forkert | Husk `ToString(...)` rundt om `Variable(Score)`, og at der er **to** parenteser til sidst. |
+| GDevelop siger, udtrykket er forkert | Tjek anførselstegnene: der skal være ét **før** `Score:` og ét **efter** mellemrummet. Og husk `+` mellem de to dele. |
+| Der står `Score: 0` hele tiden, selvom tallet tæller | Du har måske skrevet `"Score: Score"` — så står ordet der bare. Variablen skal stå **uden for** anførselstegnene. |
 | Der står *"This variable has the same name as an object"* | Dit tekstobjekt hedder `Score` ligesom variablen. Omdøb objektet til `ScoreText`. |
 | Jeg kan ikke se teksten i spillet | Du har måske ikke trukket `ScoreText` ind på scenen. Eller den står uden for skærmen. |
 | Teksten er sort på sort baggrund | Skift **Color** i objektets indstillinger, eller flyt teksten hen over noget lyst. |

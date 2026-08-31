@@ -41,7 +41,8 @@ foreach ($p in @("11-finished-events.png")) { Copy-Item (Join-Path $O $p) (Join-
 & $T -In "$O\09-add-one.png"            -Out "$I\09-add-one.png"            -Box "560,214,932,44,1","560,272,860,44,2"
 
 # Opgave 5 - udtrykket
-& $T -In "$O\10-text-expression.png"    -Out "$I\10-text-expression.png"    -Box "1034,272,360,74,1"
+# bemaerk: 10 og 11 er taget i PROGRAMMET (1920x1140), ikke i browseren som de oevrige
+& $T -In "$O\10-text-expression.png"    -Out "$I\10-text-expression.png"    -Box "1276,330,442,64,1"
 
 ""
 "Faerdig. Alle markeringer for 04-middel-variabler er lavet forfra."

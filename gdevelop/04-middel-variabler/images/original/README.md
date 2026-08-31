@@ -1,7 +1,10 @@
 # Originale skærmbilleder — uden markeringer
 
 De rå skærmbilleder til lektion 04, uden gule kasser og tal.
-Taget i browserudgaven på editor.gdevelop.io i august 2026.
+
+- `01`–`09` er taget i **browserudgaven** på editor.gdevelop.io i august 2026.
+- `10` og `11` er taget i **programmet på PC'en** og viser den korte skrivemåde
+  `"Score: " + Score`.
 
 ## Lav markeringerne igen
 
