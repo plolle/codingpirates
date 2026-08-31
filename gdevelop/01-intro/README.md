@@ -11,47 +11,22 @@ står på skærmen** — fx **Create new game** — mens forklaringerne er på d
 
 ---
 
-## Før du starter — vælg din vej
+## Opgave 1 – INTRO: Hent og installér GDevelop
 
-Du kan bruge GDevelop på to måder. **Vælg én af dem**, og bliv ved den gennem hele kurset.
-Vælg ikke begge — så ender du med to forskellige projekter, der ikke kender hinanden.
-
-| | **A: I browseren** | **B: Programmet på din PC** |
-|---|---|---|
-| Skal installeres? | Nej | Ja, én gang |
-| Kræver login? | **Ja** — gratis konto | Nej |
-| Hvor gemmes spillet? | I skyen (GDevelop Cloud) | I en mappe på din PC |
-| Virker uden internet? | Nej | Ja |
-| Tegneprogrammet **Piskel** | Virker ikke | Virker |
-
-**Billederne herunder er fra browseren.** Selve editoren ser ens ud i begge udgaver, så du
-kan følge med, uanset hvad du vælger. Det eneste, der er rigtig forskelligt, er hvor spillet
-bliver gemt.
-
-> ⚠️ **Vigtigt om browseren:** du kan ikke lave et projekt uden at logge ind, og en gratis
-> konto kan højst have **3 projekter i skyen** ad gangen. Skal en hel klasse i gang uden
-> konti, så vælg **B**.
-
-> 💡 **Står dine knapper på dansk?** Så passer de ikke til vejledningen. Gå til
-> **Preferences** nederst i menuen til venstre, og sæt sproget til **English**.
-
----
-
-## Opgave 1 – INTRO: Åbn GDevelop
-
-### Valgte du A (browseren)?
-
-1. Åbn din browser, og gå til **[editor.gdevelop.io](https://editor.gdevelop.io)**
-2. Log ind, eller lav en gratis konto med knappen **Sign up** øverst til højre.
-
-> 💡 Første gang spørger siden om lov til at bruge cookies og data. Du må gerne vælge
-> **Do not consent** — GDevelop virker fint alligevel.
-
-### Valgte du B (programmet på PC'en)?
+Vi bruger **programmet på din egen computer**. Så ligger dit spil som en almindelig fil på
+maskinen, du behøver ikke logge ind, og du kan arbejde videre, selvom der ikke er internet.
 
 1. Gå ind på **[gdevelop.io/download](https://gdevelop.io/download)**
 2. Hent udgaven til **Windows**, og installér den.
 3. Start **GDevelop** fra Start-menuen.
+
+> 💡 **Står dine knapper på dansk?** Så passer de ikke til vejledningen, for vi skriver alle
+> knapnavne på engelsk. Gå til **Preferences** nederst i menuen til venstre, og sæt sproget
+> til **English**.
+
+> 📷 **Om skærmbillederne:** de er taget i browserudgaven af GDevelop. Programmet på din PC
+> ser præcis ens ud — den eneste forskel, du vil lægge mærke til, er i **Opgave 2**, hvor du
+> vælger, *hvor* spillet skal gemmes.
 
 ---
 
@@ -80,12 +55,15 @@ I menuen til venstre er der fem punkter: **Learn**, **Create**, **Play**, **Shop
 4. Lad skærmstørrelsen stå på **Desktop & Mobile landscape (1280x720)**.
 5. I feltet **Project name** **(1)** står der et tilfældigt navn, fx *Didactic Structure*.
    **Slet det**, og skriv i stedet: `Platformspil1`
-6. **Where to store this project** **(2)**:
-   - **A (browser):** lad den stå på **GDevelop Cloud**
-   - **B (PC):** vælg din egen computer, og peg på en mappe, du kan finde igen
+6. I feltet **Where to store this project** **(2)** vælger du **din egen computer** — og
+   peger på en mappe, du kan finde igen, fx `Dokumenter\GDevelop`.
 7. Tryk på **Create new game** **(3)**.
 
 ![Boksen med Project name udfyldt med Platformspil1, gemmested og knappen Create new game](images/03-project-setup.png)
+
+> ⚠️ **På billedet står der GDevelop Cloud** — det er fordi billedet er taget i browseren.
+> I programmet skal du vælge **din egen computer** i stedet, så spillet bliver gemt som en
+> fil hos dig.
 
 Nu åbner editoren, og du har en tom scene foran dig. Det er her, spillet skal bygges.
 
@@ -164,13 +142,16 @@ Du kan også gøre det gennem menuen:
 I samme menu finder du også:
 
 - **Save as…** — gem en ekstra kopi under et nyt navn
-- **Show version history** — se ældre udgaver af spillet, hvis noget går galt
 - **Export (web, iOS, Android)…** — lav spillet færdigt, så andre kan spille det
 
 > 💡 Gør det til en vane at trykke **Ctrl + S**, hver gang du har lavet noget, der virker.
 > Så mister du aldrig mere end et par minutters arbejde.
 
 **Sådan ved du, at det er gemt:** stjernen `*` efter projektets navn i fanen forsvinder.
+
+**Hvor ligger spillet nu?** I den mappe, du valgte i Opgave 2. Tag et kig i mappen — der
+ligger projektfilen sammen med den grafik, du hentede. Den mappe er hele dit spil, så flyt
+den ikke, uden at tage det hele med.
 
 ---
 
@@ -188,8 +169,9 @@ Luk vinduet igen.
 
 Sæt et flueben ved hver ting, du har klaret:
 
-- [ ] GDevelop er klar — i browseren eller på PC'en
+- [ ] GDevelop er installeret på min computer
 - [ ] Jeg har et projekt, der hedder **Platformspil1**
+- [ ] Jeg ved, hvilken mappe projektet ligger i
 - [ ] Alle 15 figurer fra **GDevelop Platformer** står i **Objects**-panelet
 - [ ] Projektet er gemt
 - [ ] **Preview** åbner uden fejl
@@ -206,10 +188,11 @@ Sæt et flueben ved hver ting, du har klaret:
 | Problem | Løsning |
 |---|---|
 | Jeg kan ikke finde **+ Create new game** | Du står nok på **Learn**. Vælg **Create** i menuen til venstre først. |
-| Knappen **Create new game** er grå og kan ikke trykkes | Du er ikke logget ind. I browseren skal du have en konto, før du kan lave et projekt. |
-| Der står **Maximum of 3 cloud projects reached** | En gratis konto kan kun have 3 projekter i skyen. Slet et gammelt, eller brug programmet på PC'en. |
+| Knappen **Create new game** er grå og kan ikke trykkes | Du har ikke valgt et gemmested. Vælg **din egen computer** under **Where to store this project**. |
+| GDevelop vil have, at jeg logger ind | Det behøver du ikke. Log ind-knapperne er kun til dem, der vil gemme i skyen — vi gemmer på maskinen. |
 | Mine knapper er på dansk | Gå til **Preferences** nederst til venstre, og sæt sproget til **English**. |
-| **Asset Store** er tom eller loader ikke | Den kræver internet — også i PC-udgaven. Tjek din forbindelse, og prøv igen. |
+| Jeg kan ikke finde mit projekt igen | Kig i den mappe, du valgte i Opgave 2. Du kan også åbne det med **☰ → File → Open…** |
+| **Asset Store** er tom eller loader ikke | Den kræver internet — også når programmet er installeret. Tjek din forbindelse, og prøv igen. |
 | Jeg valgte **Platformer**-skabelonen ved en fejl | Luk projektet, og start Opgave 2 forfra med **Empty project**. |
 | Jeg kan ikke finde `RedHero` | Den hedder `Red_hero` med en understreg. |
 | **Objects**-panelet er væk | Slå det til igen i **View**-menuen inde i **Project manager**. |

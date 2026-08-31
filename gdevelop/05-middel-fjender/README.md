@@ -56,11 +56,10 @@ mens man bygger.
 Objekterne hedder nu **`Left_Arrow`** og **`Right_Arrow`** i **Objects**-panelet.
 
 > ✏️ **Vil du hellere tegne dine egne pile?**
-> Det kan du — men **kun i programmet på din PC**, ikke i browseren. Vælg
-> **+ Add object** → **New object from scratch** → **Sprite** → **Edit with Piskel**,
-> tegn din pil, og gem den. Kald objekterne `Left_Arrow` og `Right_Arrow`, så passer
-> resten af opgaven. Pilene bliver alligevel skjult, når spillet kører, så det er mest
-> for sjov.
+> Det kan du godt. Vælg **+ Add object** → **New object from scratch** → **Sprite** →
+> **Edit with Piskel**, tegn din pil, og gem den. Kald objekterne `Left_Arrow` og
+> `Right_Arrow`, så passer resten af opgaven. Pilene bliver alligevel skjult, når spillet
+> kører, så det er mest for sjov — men det er en god måde at prøve **Piskel** første gang.
 
 ---
 

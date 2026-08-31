@@ -31,10 +31,8 @@ scener og et kamera, der følger spilleren.
 - **GDevelop** — hentes gratis på [gdevelop.io/download](https://gdevelop.io/download)
 - Internet, i hvert fald første gang, så du kan hente grafikken til spillet
 
-> 💡 Du kan også køre GDevelop i browseren på
-> [editor.gdevelop.io](https://editor.gdevelop.io) uden at installere noget. Men vi
-> anbefaler, at du henter programmet: tegneprogrammet **Piskel**, som du skal bruge i de
-> sidste lektioner, virker kun i den version, du henter ned.
+Kurset bruger **programmet på din egen computer**. Så ligger dit spil som en almindelig fil
+hos dig, du skal ikke logge ind, og du kan arbejde videre uden internet.
 
 ---
 
@@ -74,6 +72,23 @@ De lektioner, der er grå i menuen til venstre, er ikke skrevet færdig endnu.
 - **Spørg din nabo.** Tit kan man se en andens fejl hurtigere end sin egen.
 - **Byg videre.** Når kurset er slut, er spillet dit. Lav flere baner, nye fjender eller
   din helt egen grafik.
+
+---
+
+## Kan man køre GDevelop i browseren?
+
+Ja — GDevelop findes også som en hjemmeside på
+**[editor.gdevelop.io](https://editor.gdevelop.io)**, hvor du intet skal installere.
+**Men vi bruger den ikke i dette kursus**, og det er der tre grunde til:
+
+- Du **skal have en konto** og logge ind, før du overhovedet kan lave et projekt.
+- Spillet gemmes i skyen, og en gratis konto kan kun have **3 projekter** ad gangen.
+- Tegneprogrammet **Piskel**, som vi bruger til at lave egne figurer, virker slet ikke i
+  browseren.
+
+Har du brug for browserudgaven alligevel — fx på en computer, hvor du ikke må installere
+noget — kan du følge opgaverne næsten uændret. Editoren ser ens ud. Det eneste, du skal
+gøre anderledes, er at gemme i **GDevelop Cloud** i stedet for i en mappe.
 
 ---
 
