@@ -45,8 +45,8 @@
 - num: 8
   dir: 08-advanced-camera
   title: ADVANCED – CAMERA
-  subtitle: Kameraet følger helten
-  ready: false
+  subtitle: Større bane og et kamera der følger
+  ready: true
 
 - num: 9
   dir: 09-advanced-door
