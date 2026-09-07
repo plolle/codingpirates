@@ -51,8 +51,8 @@
 - num: 9
   dir: 09-advanced-door
   title: ADVANCED – DOOR
-  subtitle: Døren der kræver mønter
-  ready: false
+  subtitle: Lag, og en dør der kræver mønter
+  ready: true
 
 - num: 10
   dir: 10-advanced-liv

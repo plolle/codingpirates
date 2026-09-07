@@ -151,6 +151,12 @@ Tryk **Preview**, klik **Start** i menuen:
 
 Husk **Ctrl + S**.
 
+> ⚠️ **Læg mærke til én ting mere:** din **Score** glider ud af skærmen, når du løber til
+> højre! Teksten hører nemlig til *banen*, ikke til *skærmen*, så kameraet trækker den med.
+>
+> Det er ikke noget, du har lavet forkert — det sker for alle, første gang kameraet kommer
+> til at bevæge sig. Vi retter det i **næste lektion** med noget, der heder et **lag**.
+
 ---
 
 ## Ekstra: Zoom
@@ -176,8 +182,8 @@ Prøv dig frem med `1.5` og `2`, og se hvad du bedst kan lide.
 - [ ] Kameraet **stopper** ved banens kanter
 - [ ] Min Events-side er delt op med gule **comments**
 
-**Næste gang** laver vi en **dør**, der kun kan åbnes, hvis du har samlet nok mønter — og en
-besked på skærmen, når du ikke har.
+**Næste gang** lærer vi om **lag**, så scoren bliver klistret fast på skærmen — og vi laver
+en **dør**, der kun kan åbnes, hvis du har samlet nok mønter.
 
 ---
 
