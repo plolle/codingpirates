@@ -57,5 +57,5 @@
 - num: 10
   dir: 10-advanced-liv
   title: ADVANCED – LIV
-  subtitle: Hjerter og ekstra liv
-  ready: false
+  subtitle: Tre hjerter og en scene-variabel
+  ready: true

@@ -60,7 +60,8 @@ Tag lektionerne i rækkefølge — hver bygger videre på den før.
 | **Middel** | 3–5 | Få helten til at bevæge sig, saml mønter med score, og lav fjender |
 | **Advanced** | 6–10 | Flere baner, menu, kamera, en låst dør og liv med hjerter |
 
-De lektioner, der er grå i menuen til venstre, er ikke skrevet færdig endnu.
+Alle ti lektioner er klar. Er du igennem dem alle, har du et helt platformspil med menu,
+score, fjender, kamera, en låst dør og tre liv.
 
 ---
 
