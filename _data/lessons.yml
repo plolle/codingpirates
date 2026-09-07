@@ -39,8 +39,8 @@
 - num: 7
   dir: 07-advanced-you-lose
   title: ADVANCED – YOU LOSE
-  subtitle: You Lose og Try again
-  ready: false
+  subtitle: Døden, You Lose og Try again
+  ready: true
 
 - num: 8
   dir: 08-advanced-camera
