@@ -110,8 +110,8 @@
     - num: 7
       dir: 07-boelger
       title: BØLGER
-      subtitle: Sværere og sværere
-      ready: false
+      subtitle: Sværere og sværere, og et lag
+      ready: true
 
     - num: 8
       dir: 08-menu-highscore

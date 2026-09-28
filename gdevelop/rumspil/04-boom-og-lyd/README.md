@@ -174,11 +174,12 @@ sprænger asteroiderne i en sky af gnister, laseren siger *piu*, og der kommer m
 > startknap, og så spiller musikken fra start.
 {: .lesson-info}
 
-## Opgave 6 – BOOM OG LYD: Pointene skal stå øverst
+## Opgave 6 – BOOM OG LYD: Plads til pointene
 
 > **VIDEN**
 >
-> Du har måske set, at asteroiderne kan flyve **hen over** pointene. Det retter vi.
+> Når du får mange point, kan **Point: 120** blive delt i to linjer, fordi tekstfeltet er
+> for smalt. Og skibet kan flyve hen over pointene. Begge dele retter vi her.
 {: .lesson-info}
 
 > **GØR DETTE**
@@ -193,9 +194,12 @@ sprænger asteroiderne i en sky af gnister, laseren siger *piu*, og der kommer m
 > **VIDEN**
 >
 > - **Z** bestemmer, hvad der ligger øverst. Et objekt med et stort Z ligger oven på
->   objekter med et mindre Z. Med `100` ligger pointene over alt andet.
-> - **W** giver teksten plads nok. Er feltet for smalt, kan **Point: 120** blive delt i to
->   linjer.
+>   objekter med et mindre Z. Med `100` ligger pointene over skibet og baggrunden.
+> - **W** giver teksten plads nok, så den står på én linje.
+>
+> Asteroiderne kan stadig flyve hen over pointene. Det skyldes, at objekter, som events
+> laver, får et endnu større Z. I lektionen om bølger lærer du at løse det rigtigt med et
+> **lag**.
 {: .lesson-info}
 
 ## Hele koden samlet
@@ -235,7 +239,7 @@ sprænger asteroiderne i en sky af gnister, laseren siger *piu*, og der kommer m
 > - Når en asteroide bliver ramt, lyder der et brag, og den sprænger i gule og røde
 >   gnister.
 > - Musikken spiller hele tiden og starter forfra, når nummeret er slut.
-> - Pointene står øverst, også når en asteroide flyver forbi.
+> - Pointene står på én linje, også når du har mange point.
 {: .lesson-info}
 
 ## Ekstra: Lav din egen lyd
@@ -267,7 +271,7 @@ sprænger asteroiderne i en sky af gnister, laseren siger *piu*, og der kommer m
 > - Asteroider sprænger i gnister, når de bliver ramt.
 > - Der er lyd på skud og eksplosioner.
 > - Der spiller musik.
-> - Pointene ligger øverst og står på én linje.
+> - Pointene har Z `100` og står på én linje.
 > - Jeg har gemt projektet.
 {: .lesson-info}
 
@@ -288,5 +292,6 @@ sprænger asteroiderne i en sky af gnister, laseren siger *piu*, og der kommer m
 | Musikken starter ikke. | **GØR DETTE:** Tryk på en tast eller klik i spillet. Musik må først spille, når du har rørt spillet. |
 | Musikken stopper efter et minut. | **GØR DETTE:** Vælg **Yes** ved **Repeat the sound** i **Play a music file**. |
 | Pointene står på to linjer. | **GØR DETTE:** Klik på teksten på scenen, og skriv `400` i **W**. |
-| Asteroiderne flyver hen over pointene. | **GØR DETTE:** Skriv `100` i **Z** for `PointTekst`. |
+| Skibet flyver hen over pointene. | **GØR DETTE:** Skriv `100` i **Z** for `PointTekst`. |
+| Asteroiderne flyver hen over pointene. | **VIDEN:** Det er rigtigt nok endnu. Det løser vi med et lag i lektionen om bølger. |
 {: .lesson-help}
