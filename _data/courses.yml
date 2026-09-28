@@ -87,7 +87,7 @@
       dir: 03-asteroider
       title: ASTEROIDER
       subtitle: Tilfældige tal og point
-      ready: false
+      ready: true
 
     - num: 4
       dir: 04-boom-og-lyd
