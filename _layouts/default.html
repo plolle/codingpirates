@@ -31,6 +31,23 @@
   {% if listed.size == 0 %}{% assign listed = site.data.courses %}{% endif %}
 
   <aside class="sidebar">
+    {% comment %}Stien op til forsiden: alle mapper over kurset, fx Coding Pirates › GDevelop{% endcomment %}
+    {% if course %}
+    {% assign crumb_parts = course_url | split: '/' %}
+    <nav class="crumbs" aria-label="Sti">
+      <a href="{{ '/' | relative_url }}">Coding Pirates</a>
+      {% assign acc = '/' %}
+      {% for part in crumb_parts offset: 1 %}
+        {% unless forloop.last %}
+          {% assign acc = acc | append: part | append: '/' %}
+          {% assign up = site.pages | where: 'url', acc | first %}
+          <span aria-hidden="true">›</span>
+          <a href="{{ acc | relative_url }}">{{ up.title | default: part }}</a>
+        {% endunless %}
+      {% endfor %}
+    </nav>
+    {% endif %}
+
     {% if course %}
     <a class="brand" href="{{ course_url | relative_url }}">
       <span class="brand-icon">{{ course.icon }}</span>
@@ -105,7 +122,7 @@
     </nav>
 
     <div class="sidebar-foot">
-      {% if course %}<a href="{{ '/' | relative_url }}">Alle kurser</a> · {% endif %}<a href="https://github.com/{{ site.github.repository_nwo | default: 'plolle/codingpirates' }}">Se projektet på GitHub</a>
+      <a href="https://github.com/{{ site.github.repository_nwo | default: 'plolle/codingpirates' }}">Se projektet på GitHub</a>
     </div>
   </aside>
 
