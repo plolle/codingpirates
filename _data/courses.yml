@@ -75,7 +75,7 @@
       dir: 01-intro
       title: INTRO
       subtitle: Nyt projekt og et skib der flyver
-      ready: false
+      ready: true
 
     - num: 2
       dir: 02-skyd
