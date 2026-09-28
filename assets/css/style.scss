@@ -121,6 +121,9 @@ body {
 .lessons .disabled .t { color: var(--ink-faint); font-weight: 500; }
 .lessons .disabled .s { color: #a8b0b9; }
 
+/* Kursuslisten paa forsiden: ikonet i stedet for et nummer */
+.courses .num { background: none; font-size: 15px; }
+
 /* ---------- Sidebar: paa denne side ---------- */
 .toc ul { list-style: none; margin: 0; padding: 0 0 0 2px; border-left: 2px solid var(--line); }
 .toc li { margin: 0; }

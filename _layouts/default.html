@@ -12,21 +12,39 @@
 
 <div class="layout">
 
+  {% comment %}Kurset findes ud fra første del af adressen, fx /gdevelop/01-intro/{% endcomment %}
+  {% assign parts = page.url | split: '/' %}
+  {% assign lesson_dir = parts[2] %}
+  {% assign course = nil %}
+  {% if parts[1] %}{% assign course = site.data.courses | where: 'dir', parts[1] | first %}{% endif %}
+  {% if course %}{% assign course_url = '/' | append: course.dir | append: '/' %}{% endif %}
+
   <aside class="sidebar">
-    <a class="brand" href="{{ '/gdevelop/' | relative_url }}">
-      <span class="brand-icon">🎮</span>
+    {% if course %}
+    <a class="brand" href="{{ course_url | relative_url }}">
+      <span class="brand-icon">{{ course.icon }}</span>
       <span class="brand-text">
-        <strong>GDevelop</strong>
-        <small>Byg dit eget platformspil</small>
+        <strong>{{ course.title }}</strong>
+        <small>{{ course.subtitle }}</small>
       </span>
     </a>
+    {% else %}
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-icon">🏴‍☠️</span>
+      <span class="brand-text">
+        <strong>Coding Pirates</strong>
+        <small>Spilkurser</small>
+      </span>
+    </a>
+    {% endif %}
 
+    {% if course %}
     <nav class="lessons" aria-label="Lektioner">
       <h2 class="nav-heading">Lektioner</h2>
       <ol>
-        {% for lesson in site.data.lessons %}
-          {% assign target = '/gdevelop/' | append: lesson.dir | append: '/' | relative_url %}
-          {% if page.url contains lesson.dir %}{% assign state = 'active' %}
+        {% for lesson in course.lessons %}
+          {% assign target = course_url | append: lesson.dir | append: '/' | relative_url %}
+          {% if lesson.dir == lesson_dir %}{% assign state = 'active' %}
           {% elsif lesson.ready %}{% assign state = 'ready' %}
           {% else %}{% assign state = 'todo' %}{% endif %}
           <li class="{{ state }}">
@@ -51,6 +69,24 @@
         {% endfor %}
       </ol>
     </nav>
+    {% else %}
+    <nav class="lessons courses" aria-label="Kurser">
+      <h2 class="nav-heading">Kurser</h2>
+      <ol>
+        {% for c in site.data.courses %}
+          <li class="ready">
+            <a href="{{ '/' | append: c.dir | append: '/' | relative_url }}">
+              <span class="num">{{ c.icon }}</span>
+              <span class="label">
+                <span class="t">{{ c.title }}</span>
+                <span class="s">{{ c.subtitle }}</span>
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+    {% endif %}
 
     <nav class="toc" aria-label="Indhold på denne side" hidden>
       <h2 class="nav-heading">På denne side</h2>
@@ -58,27 +94,29 @@
     </nav>
 
     <div class="sidebar-foot">
-      <a href="https://github.com/{{ site.github.repository_nwo | default: 'plolle/codingpirates' }}">Se projektet på GitHub</a>
+      {% if course %}<a href="{{ '/' | relative_url }}">Alle kurser</a> · {% endif %}<a href="https://github.com/{{ site.github.repository_nwo | default: 'plolle/codingpirates' }}">Se projektet på GitHub</a>
     </div>
   </aside>
 
   <main class="content">
     {{ content }}
 
-    {% comment %}Forrige/naeste-navigation, udregnet ud fra lessons.yml{% endcomment %}
-    {% assign ready = site.data.lessons | where: 'ready', true %}
+    {% comment %}Forrige/naeste-navigation, udregnet ud fra courses.yml{% endcomment %}
+    {% if course %}
+    {% assign ready = course.lessons | where: 'ready', true %}
     {% assign prev = nil %}{% assign next = nil %}{% assign found = false %}
     {% for lesson in ready %}
-      {% if page.url contains lesson.dir %}{% assign found = true %}
+      {% if lesson.dir == lesson_dir %}{% assign found = true %}
       {% elsif found and next == nil %}{% assign next = lesson %}
       {% elsif found == false %}{% assign prev = lesson %}
       {% endif %}
     {% endfor %}
     {% if found and prev or found and next %}
     <nav class="pager">
-      {% if prev %}<a class="prev" href="{{ '/gdevelop/' | append: prev.dir | append: '/' | relative_url }}"><small>Forrige</small>{{ prev.title }}</a>{% endif %}
-      {% if next %}<a class="next" href="{{ '/gdevelop/' | append: next.dir | append: '/' | relative_url }}"><small>Næste</small>{{ next.title }}</a>{% endif %}
+      {% if prev %}<a class="prev" href="{{ course_url | append: prev.dir | append: '/' | relative_url }}"><small>Forrige</small>{{ prev.title }}</a>{% endif %}
+      {% if next %}<a class="next" href="{{ course_url | append: next.dir | append: '/' | relative_url }}"><small>Næste</small>{{ next.title }}</a>{% endif %}
     </nav>
+    {% endif %}
     {% endif %}
   </main>
 

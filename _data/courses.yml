@@ -1,0 +1,67 @@
+# Kurserne på sitet. dir er kursets mappe, og lessons er lektionerne i den
+# rækkefølge de skal tages.
+# ready: false gør punktet grået ud i menuen, indtil lektionen er skrevet.
+- dir: gdevelop
+  title: GDevelop
+  subtitle: Byg dit eget platformspil
+  icon: 🎮
+  lessons:
+    - num: 1
+      dir: 01-intro
+      title: INTRO
+      subtitle: Kom i gang og hent grafikken
+      ready: true
+
+    - num: 2
+      dir: 02-begynder
+      title: BEGYNDER
+      subtitle: Behaviors og collision masks
+      ready: true
+
+    - num: 3
+      dir: 03-middel-events
+      title: MIDDEL – EVENTS
+      subtitle: Events, conditions og animationer
+      ready: true
+
+    - num: 4
+      dir: 04-middel-variabler
+      title: MIDDEL – VARIABLER
+      subtitle: Score med globale variabler
+      ready: true
+
+    - num: 5
+      dir: 05-middel-fjender
+      title: MIDDEL – FJENDER
+      subtitle: Monster på patrulje
+      ready: true
+
+    - num: 6
+      dir: 06-advanced-scener
+      title: ADVANCED – SCENER
+      subtitle: Menu, flere scener og You Win
+      ready: true
+
+    - num: 7
+      dir: 07-advanced-you-lose
+      title: ADVANCED – YOU LOSE
+      subtitle: Døden, You Lose og Try again
+      ready: true
+
+    - num: 8
+      dir: 08-advanced-camera
+      title: ADVANCED – CAMERA
+      subtitle: Større bane og et kamera der følger
+      ready: true
+
+    - num: 9
+      dir: 09-advanced-door
+      title: ADVANCED – DOOR
+      subtitle: Lag, og en dør der kræver mønter
+      ready: true
+
+    - num: 10
+      dir: 10-advanced-liv
+      title: ADVANCED – LIV
+      subtitle: Tre hjerter og en scene-variabel
+      ready: true
