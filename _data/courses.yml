@@ -98,8 +98,8 @@
     - num: 5
       dir: 05-liv
       title: LIV OG HEALTH BAR
-      subtitle: Skade, health bar og Game Over
-      ready: false
+      subtitle: Tre liv, health bar og Game Over
+      ready: true
 
     - num: 6
       dir: 06-fjender
