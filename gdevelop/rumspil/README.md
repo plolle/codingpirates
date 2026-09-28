@@ -74,7 +74,8 @@ Tag lektionerne i rækkefølge — hver bygger videre på den før.
 | **Advanced** | 6–8 | Fjender, bølger, der bliver sværere, menu og highscore |
 | **Ekstra** | 9 | Power-ups og en stor boss til sidst |
 
-Lektionerne bliver skrevet en ad gangen. Dem, der ikke er klar endnu, er grå i menuen.
+Alle ni lektioner er klar. Er du igennem de første otte, har du et helt rumspil med menu,
+highscore, fjender og bølger. Lektion 9 er ekstra, med power-ups og en boss.
 
 ---
 

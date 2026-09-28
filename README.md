@@ -10,4 +10,4 @@ Undervisningsmateriale til Coding Pirates.
   GDevelop. Ti lektioner fra tomt projekt til færdigt spil med fjender, liv og flere baner.
 - **[Byg dit eget rumspil](gdevelop/rumspil/)** — et rumskib, der skyder asteroider og
   fjender i bølger, med eksplosioner, lyd og en highscore, der bliver gemt. Tag gerne
-  platformspillet først. *Lektionerne er på vej.*
+  platformspillet først. Ni lektioner, den sidste med power-ups og en stor boss.
