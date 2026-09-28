@@ -17,6 +17,10 @@
 .PARAMETER Delay
   Sekunder at vente, så du kan klikke over i GDevelop først. Standard 5.
 
+.PARAMETER Root
+  Kursets mappe. Standard er platformspillet; brug fx
+  "c:\Sandbox\Privat\codingpirates\gdevelop\rumspil" til rumspillet.
+
 .EXAMPLE
   .\Capture-Screenshot.ps1 -Lesson 01-intro -Name 01-create-a-project -Delay 6 -Window
 #>
@@ -26,7 +30,7 @@ param(
   [Parameter(Mandatory)][string]$Name,
   [int]$Delay = 5,
   [switch]$Window,
-  [string]$Root = "c:\Sandbox\Privat\codingpirates\gdevelop"
+  [string]$Root = "c:\Sandbox\Privat\codingpirates\gdevelop\platformspil"
 )
 
 Add-Type -AssemblyName System.Windows.Forms, System.Drawing

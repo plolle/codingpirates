@@ -10,7 +10,7 @@
 param([string]$Root = "c:\Sandbox\Privat\codingpirates")
 
 $T = Join-Path $Root "tools\Annotate-Screenshot.ps1"
-$I = Join-Path $Root "gdevelop\07-advanced-you-lose\images"
+$I = Join-Path $Root "gdevelop\platformspil\07-advanced-you-lose\images"
 $O = Join-Path $I "original"
 if (-not (Test-Path $O)) { throw "Mangler mappen med originaler: $O" }
 

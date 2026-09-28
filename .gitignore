@@ -1,2 +1,8 @@
 # Stilprøver til markeringer - kun til at kigge paa lokalt
 tools/demo/
+
+# Lokal Jekyll-build (bundle exec jekyll serve)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock

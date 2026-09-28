@@ -10,7 +10,7 @@ param(
 
 Add-Type -AssemblyName System.Drawing
 
-$dest = Join-Path $Root "gdevelop\03-middel-events\images\original"
+$dest = Join-Path $Root "gdevelop\platformspil\03-middel-events\images\original"
 if (-not (Test-Path $dest)) { New-Item -ItemType Directory -Force -Path $dest | Out-Null }
 
 $map = @(

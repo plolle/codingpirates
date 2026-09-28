@@ -22,7 +22,7 @@
   .\Capture-Window.ps1 -List
 
 .EXAMPLE
-  .\Capture-Window.ps1 -Match "GDevelop" -Out ".\gdevelop\01-intro\images\02-start-screen.png"
+  .\Capture-Window.ps1 -Match "GDevelop" -Out ".\gdevelop\platformspil\01-intro\images\02-start-screen.png"
 #>
 [CmdletBinding()]
 param(

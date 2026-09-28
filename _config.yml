@@ -1,5 +1,5 @@
-title: GDevelop — byg dit eget platformspil
-description: Spilkursus til Coding Pirates
+title: Coding Pirates – spilkurser
+description: Spilkurser til Coding Pirates
 lang: da
 
 url: https://plolle.github.io
@@ -33,3 +33,6 @@ defaults:
 exclude:
   - tools
   - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor
