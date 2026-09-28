@@ -81,7 +81,7 @@
       dir: 02-skyd
       title: SKYD!
       subtitle: Laserskud og en timer
-      ready: false
+      ready: true
 
     - num: 3
       dir: 03-asteroider
