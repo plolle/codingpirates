@@ -29,7 +29,7 @@ kører, timere, tilfældige tal, partikler, lyd og at gemme data.
 
 ## Har du prøvet platformspillet?
 
-Det er en god idé at tage **[platformspillet](../gdevelop/)** først, men du behøver det
+Det er en god idé at tage **[platformspillet](../platformspil/)** først, men du behøver det
 ikke. Rumspillet starter forfra med et nyt projekt og forklarer det hele.
 
 Ting, du allerede kender fra platformspillet — som variabler, tekst på skærmen og scener
@@ -45,7 +45,7 @@ Ting, du allerede kender fra platformspillet — som variabler, tekst på skærm
 
 Kurset bruger **programmet på din egen computer**, ligesom platformspillet. Hvorfor vi
 ikke bruger browserudgaven, kan du læse nederst på
-[platformspillets forside](../gdevelop/).
+[platformspillets forside](../platformspil/).
 
 ---
 

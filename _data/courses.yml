@@ -1,7 +1,7 @@
 # Kurserne på sitet. dir er kursets mappe, og lessons er lektionerne i den
 # rækkefølge de skal tages.
 # ready: false gør punktet grået ud i menuen, indtil lektionen er skrevet.
-- dir: gdevelop
+- dir: gdevelop/platformspil
   title: GDevelop
   subtitle: Byg dit eget platformspil
   icon: 🎮
@@ -66,7 +66,7 @@
       subtitle: Tre hjerter og en scene-variabel
       ready: true
 
-- dir: rumspil
+- dir: gdevelop/rumspil
   title: GDevelop
   subtitle: Byg dit eget rumspil
   icon: 🚀

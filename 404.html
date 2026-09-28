@@ -1,0 +1,18 @@
+---
+title: Siden findes ikke
+permalink: /404.html
+---
+<h1>Siden findes ikke 🏴‍☠️</h1>
+
+<p>Den side, du leder efter, er flyttet eller findes ikke.</p>
+
+<p class="cta"><a href="{{ '/' | relative_url }}">Gå til forsiden &rarr;</a></p>
+
+<script>
+// Platformspillet laa foer direkte i /gdevelop/NN-lektion/. Send gamle links videre.
+(function () {
+  var base = '{{ site.baseurl }}';
+  var m = location.pathname.match(new RegExp('^' + base + '/gdevelop/(\\d\\d-[^/]+)(/.*)?$'));
+  if (m) { location.replace(base + '/gdevelop/platformspil/' + m[1] + (m[2] || '/') + location.hash); }
+})();
+</script>

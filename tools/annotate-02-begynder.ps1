@@ -8,7 +8,7 @@ param(
 )
 
 $T = Join-Path $Root "tools\Annotate-Screenshot.ps1"
-$I = Join-Path $Root "gdevelop\02-begynder\images"
+$I = Join-Path $Root "gdevelop\platformspil\02-begynder\images"
 $O = Join-Path $I "original"
 
 if (-not (Test-Path $O)) { throw "Mangler mappen med originaler: $O" }

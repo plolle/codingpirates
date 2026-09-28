@@ -11,7 +11,7 @@ param(
 
 Add-Type -AssemblyName System.Drawing
 
-$dest = Join-Path $Root "gdevelop\08-advanced-camera\images\original"
+$dest = Join-Path $Root "gdevelop\platformspil\08-advanced-camera\images\original"
 if (-not (Test-Path $dest)) { New-Item -ItemType Directory -Force -Path $dest | Out-Null }
 
 $map = @(

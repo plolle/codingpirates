@@ -15,7 +15,7 @@ param(
 
 Add-Type -AssemblyName System.Drawing
 
-$dest = Join-Path $Root "gdevelop\01-intro\images\original"
+$dest = Join-Path $Root "gdevelop\platformspil\01-intro\images\original"
 if (-not (Test-Path $dest)) { New-Item -ItemType Directory -Force -Path $dest | Out-Null }
 
 # kilde-suffiks -> nyt filnavn, plus de omraader der skal maskeres.

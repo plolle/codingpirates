@@ -12,12 +12,23 @@
 
 <div class="layout">
 
-  {% comment %}Kurset findes ud fra første del af adressen, fx /gdevelop/01-intro/{% endcomment %}
-  {% assign parts = page.url | split: '/' %}
-  {% assign lesson_dir = parts[2] %}
-  {% assign course = nil %}
-  {% if parts[1] %}{% assign course = site.data.courses | where: 'dir', parts[1] | first %}{% endif %}
-  {% if course %}{% assign course_url = '/' | append: course.dir | append: '/' %}{% endif %}
+  {% comment %}Kurset er det, hvis mappe adressen starter med, fx /gdevelop/platformspil/01-intro/{% endcomment %}
+  {% assign course = nil %}{% assign lesson_dir = nil %}
+  {% for c in site.data.courses %}
+    {% assign prefix = '/' | append: c.dir | append: '/' %}
+    {% assign head = page.url | slice: 0, prefix.size %}
+    {% if head == prefix %}{% assign course = c %}{% assign course_url = prefix %}{% endif %}
+  {% endfor %}
+  {% if course %}{% assign lesson_dir = page.url | remove_first: course_url | split: '/' | first %}{% endif %}
+
+  {% comment %}Uden for et kursus vises de kurser, der ligger under siden - eller alle, hvis ingen gør{% endcomment %}
+  {% assign listed = '' | split: '' %}
+  {% for c in site.data.courses %}
+    {% assign c_url = '/' | append: c.dir | append: '/' %}
+    {% assign head = c_url | slice: 0, page.url.size %}
+    {% if head == page.url %}{% assign listed = listed | push: c %}{% endif %}
+  {% endfor %}
+  {% if listed.size == 0 %}{% assign listed = site.data.courses %}{% endif %}
 
   <aside class="sidebar">
     {% if course %}
@@ -73,7 +84,7 @@
     <nav class="lessons courses" aria-label="Kurser">
       <h2 class="nav-heading">Kurser</h2>
       <ol>
-        {% for c in site.data.courses %}
+        {% for c in listed %}
           <li class="ready">
             <a href="{{ '/' | append: c.dir | append: '/' | relative_url }}">
               <span class="num">{{ c.icon }}</span>
