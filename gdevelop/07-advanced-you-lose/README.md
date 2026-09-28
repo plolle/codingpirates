@@ -1,171 +1,206 @@
 # OPGAVER TIL GDevelop – ADVANCED – YOU LOSE
 
-Sidst lavede du fire scener. `You Lose` står stadig helt tom.
-
-Nu gør vi den færdig — og så kan helten **endelig dø**. Indtil nu har monsteret været
-harmløst, hvis man løb ind i det fra siden, og man kunne falde ned i det uendelige uden at
-der skete noget. Det retter vi i denne lektion.
-
-> 🟡 **Om billederne:** de gule kasser viser, hvor du skal klikke — eller hvad der er nyt.
+> **VIDEN**
+>
+> Sidst lavede du fire scener. Nu gør du `You Lose` færdig og laver to måder, helten kan tabe
+> på.
+>
+> Knapperne står på engelsk. Vi skriver deres navne, som de står på skærmen. Bokse med hel
+> kant er **GØR DETTE**. Bokse med stiplet kant er **VIDEN**. Gule felter viser, hvor du
+> skal klikke, eller hvad der er nyt. Tallene ved felterne passer til tallene i teksten.
+{: .lesson-info}
 
 ---
 
 ## To måder at dø på
 
-Et platformspil har næsten altid de her to farer, og vi laver dem begge:
+> **VIDEN**
+>
+> Et platformspil har ofte de her to farer. I denne lektion laver du dem begge.
+{: .lesson-info}
 
-| Fare | Hvad skal ske |
-|---|---|
-| Monsteret rammer helten, mens han står på jorden | Helten dør |
-| Helten falder ud over kanten og ned i ingenting | Helten dør |
-
-Begge fører til den samme skærm: scenen `You Lose`. Og derfra skal man kunne prøve igen.
+> **VIDEN**
+>
+> | Fare | Hvad sker der? |
+> |---|---|
+> | Monsteret rammer helten, mens han står på jorden | Helten taber |
+> | Helten falder ud over kanten | Helten taber |
+>
+> Begge dele åbner scenen `You Lose`. Derfra kan du prøve igen.
+{: .lesson-info}
 
 ---
 
 ## Opgave 1 – YOU LOSE: Giv scenen en baggrundsfarve
 
-1. Tryk på **☰** for at åbne **Project manager**.
-2. Under **Scenes**, klik på **`You Lose`**.
-3. Luk **Project manager** med krydset.
-4. I **Properties**-panelet til venstre skriver du en farve i **Background color**.
-   Prøv `90;30;30` — en mørk, uhyggelig rød.
+> **GØR DETTE**
+>
+> 1. Vælg **☰** for at åbne **Project manager**.
+> 2. Under **Scenes** vælger du `You Lose`.
+> 3. Luk **Project manager** med krydset.
+> 4. I **Properties** til venstre skal du skrive `90;30;30` i **Background color**.
+{: .lesson-action}
 
-Det er præcis det samme, du gjorde med `Menu` i SCENER.
+> **VIDEN**
+>
+> Det er det samme, du gjorde med `Menu` i SCENER. Farven `90;30;30` er mørkerød.
+{: .lesson-info}
 
 ---
 
 ## Opgave 2 – YOU LOSE: Lav de to tekster
 
-Scenen skal have to **Text**-objekter: en stor overskrift og en knap, man kan trykke på.
+> **VIDEN**
+>
+> Scenen skal have to **Text**-objekter: en stor overskrift og en knap, du kan vælge.
+{: .lesson-info}
 
 ### Overskriften
 
-1. Tryk **+ Add object** i **Objects**-panelet.
-2. Vælg fanen **New object from scratch**, søg efter `text`, og vælg **Text**.
-3. Udfyld:
-   - **Object name**: `LoseText`
-   - **Size**: `70`
-   - **Initial text to display**: `You Lose....`
-4. Teksten er sort som standard, og baggrunden er mørk. Klik på den sorte firkant ved
-   **Color:** — så åbner en farvevælger.
-5. Klik på den **hvide** firkant nederst til højre i paletten. Nu står der `FFFFFF` i
-   **Hex**-feltet.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add object** i **Objects**.
+> 2. Vælg **New object from scratch**, søg efter `text`, og vælg **Text**.
+> 3. Udfyld:
+>    - **Object name**: `LoseText`
+>    - **Size**: `70`
+>    - **Initial text to display**: `You Lose....`
+> 4. Vælg den sorte firkant ved **Color** for at åbne farvevælgeren.
+> 5. Vælg den hvide firkant **(1)** nederst til højre. Tjek, at der står `FFFFFF` i **Hex**.
+{: .lesson-action}
 
 ![Boksen Edit LoseText med farvevælgeren åben, hvid valgt og FFFFFF i Hex-feltet](images/01-lose-text.png)
 
-6. Tryk **Apply**, og **træk `LoseText` ind på scenen**. Placér den lidt over midten.
+> **GØR DETTE**
+>
+> Vælg **Apply**. Træk `LoseText` ind på scenen, lidt over midten.
+{: .lesson-action}
 
 ### Knappen
 
-Gør det hele én gang til, men med disse værdier:
-
-- **Object name**: `TryAgainText`
-- **Size**: `40`
-- **Initial text to display**: `Try again!`
-- **Color**: skriv `FF00FF` i **Hex**-feltet ① og tryk **Enter** — så bliver teksten
-  lyserød/magenta
-
-Træk den ind **under** `LoseText`.
+> **GØR DETTE**
+>
+> Lav endnu et **Text**-objekt med disse indstillinger:
+> - **Object name**: `TryAgainText`
+> - **Size**: `40`
+> - **Initial text to display**: `Try again!`
+> - **Color**: skriv `FF00FF` i **Hex**, og tryk **Enter**.
+>
+> Træk teksten ind under `LoseText`.
+{: .lesson-action}
 
 ![You Lose-scenen med mørkerød baggrund, You Lose.... i hvid og Try again! i magenta](images/02-you-lose-scene.png)
 
-> 💡 **Hex** er en farvekode: to tegn for rød, to for grøn og to for blå. `FF` er "helt
-> åben" og `00` er "helt lukket". Så `FF00FF` = fuld rød + ingen grøn + fuld blå. Prøv at
-> skrive `00FF00` og se hvad der sker.
+> **VIDEN**
+>
+> **Hex** er en farvekode. De første to tegn er rød, de næste to grøn og de sidste to blå.
+> `FF` betyder meget af farven, og `00` betyder ingen af farven.
+{: .lesson-info}
 
-> 💡 Du kan også sætte farven bagefter i **Properties**-panelet under **Color** — det var
-> den vej, du gik i SCENER. Det er to veje til det samme.
+> **GØR DETTE**
+>
+> Vil du prøve en anden farve? Skriv `00FF00` i **Hex**, og se, hvad der sker.
+{: .lesson-action}
+
+> **VIDEN**
+>
+> Du kan også ændre farven senere i **Properties** under **Color**.
+{: .lesson-info}
 
 ---
 
 ## Opgave 3 – YOU LOSE: Få "Try again!" til at starte forfra
 
-Åbn fanen **You Lose (Events)** foroven. Den er tom.
-
-1. Tryk **+ Add an event**.
-2. **+ Add condition** → vælg objektet **`TryAgainText`** → søg efter `cursor` →
-   vælg **The cursor/touch is on an object**. Tryk **Ok**.
-3. **+ Add condition** igen → søg efter `mouse button` i det **øverste** søgefelt →
-   vælg **Mouse button pressed or touch held**.
-4. I **Button to check** vælger du **Left (primary)**. Tryk **Ok**.
-5. **+ Add action** → søg efter `change to scene` → vælg **Change the scene**.
-6. I **Name of the new scene** ① vælger du **Game**. Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Åbn fanen **You Lose (Events)**.
+> 2. Vælg **+ Add an event**.
+> 3. Vælg **+ Add condition**. Vælg `TryAgainText`, søg efter `cursor`, og vælg
+>    **The cursor/touch is on an object**. Vælg **Ok**.
+> 4. Tilføj en condition mere. Søg efter `mouse button` i det øverste søgefelt, og vælg
+>    **Mouse button pressed or touch held**.
+> 5. Sæt **Button to check** til **Left (primary)**, og vælg **Ok**.
+> 6. Vælg **+ Add action**. Søg efter `change to scene`, og vælg **Change the scene**.
+> 7. Sæt **Name of the new scene** til **Game** **(1)**, og vælg **Ok**.
+{: .lesson-action}
 
 ![Actionen Change the scene hvor Name of the new scene er sat til Game](images/03-change-scene.png)
 
-> ⚠️ Der står også **Stop and go back to previous scene** i listen. Den skal du **ikke**
-> bruge her — den ville sende dig tilbage til `You Lose` igen bagefter.
+> **VIDEN**
+>
+> **Stop and go back to previous scene** ville sende dig tilbage til `You Lose`.
+{: .lesson-info}
 
 ![You Lose-scenens færdige event der skifter til scenen Game](images/04-try-again-event.png)
 
-Læg mærke til, at det er **præcis** det samme event som Start-knappen i menuen. Kun
-scenenavnet er anderledes. Sådan laver man alle knapper i GDevelop.
-
-> 💡 **Change the scene** starter `Game` helt forfra. Derfor bliver scoren også nulstillet
-> — det sørger dit **At the beginning of the scene**-event fra VARIABLER for.
+> **VIDEN**
+>
+> Det er samme slags event som Start-knappen i menuen. Her går spillet til `Game`. Spillet
+> starter banen forfra, og eventet fra VARIABLER sætter scoren til nul.
+{: .lesson-info}
 
 ---
 
 ## Opgave 4 – YOU LOSE: Gør monsteret farligt
 
-Nu til selve banen. Åbn fanen **Game (Events)**, og rul helt ned i bunden.
+> **GØR DETTE**
+>
+> Åbn fanen **Game (Events)**, og rul ned til bunden.
+{: .lesson-action}
 
-1. Tryk **+ Add a new event**.
-2. **+ Add condition** → vælg objektet **`Red_hero`** → søg efter `collision` →
-   vælg **Collision**. I feltet **Object** vælger du **`Monster`**. Tryk **Ok**.
-3. **+ Add condition** igen → **`Red_hero`** → søg efter `floor` → vælg **Is on floor**.
-   Tryk **Ok**.
-4. **+ Add action** → søg efter `change to scene` → vælg **Change the scene** →
-   **Name of the new scene**: **You Lose**. Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add a new event**.
+> 2. Tilføj en **Collision** condition for `Red_hero` og `Monster`.
+> 3. Tilføj en condition mere: `Red_hero` → **Is on floor**.
+> 4. Tilføj **Change the scene**, og sæt **Name of the new scene** til **You Lose**.
+> 5. Vælg **Ok**.
+{: .lesson-action}
 
-### Hvorfor "Is on floor"?
+> **VIDEN**
+>
+> Monsteret dør, når helten rammer det, mens han falder. Helten taber, når han rammer
+> monsteret med fødderne på jorden. Hvis helten rammer monsteret, mens han hopper op, sker
+> der ikke noget.
+{: .lesson-info}
 
-Fordi du allerede har et event fra FJENDER, der **sletter** monsteret, når helten er
-`is falling`. De to events må ikke slås om det samme sammenstød — så skal de handle om
-**hver sin** situation:
-
-| Hvor er helten, når han rører monsteret? | Hvad sker der |
-|---|---|
-| I luften og på vej **nedad** (`is falling`) | **Monsteret** dør — eventet fra FJENDER |
-| Med fødderne på jorden (`is on floor`) | **Helten** dør — det nye event |
-| I luften og på vej **opad** | Ingenting — han er hverken faldende eller på jorden |
-
-Den sidste linje er ikke en fejl: hopper du *op i* et monster fra siden, slipper du. Sådan
-er det i mange platformspil, og det gør spillet lidt mildere.
-
-> 💡 **Til dig, der vil vide mere:** nederst i condition-boksen er der en knap, der heder
-> **Invert condition**. Med den kunne du i stedet skrive "helten rører monsteret **og er
-> IKKE** `is falling`". Det giver næsten det samme, men `is on floor` er nemmere at læse.
+> **VIDEN**
+>
+> Du kan også vende en condition om med **Invert condition**. Her er **Is on floor** nemmere
+> at læse.
+{: .lesson-info}
 
 ---
 
 ## Opgave 5 – YOU LOSE: Lad helten falde i døden
 
-Falder helten ud over kanten, bliver han bare ved med at falde. Det skal koste livet.
+> **VIDEN**
+>
+> Hvis helten falder ud over kanten, skal han tabe.
+{: .lesson-info}
 
-1. Tryk **+ Add a new event**.
-2. **+ Add condition** → vælg objektet **`Red_hero`** → søg efter `Y position` →
-   vælg **Y position** (den øverste, under **Position**).
-3. Udfyld ①:
-   - **Sign of the test**: **> (greater than)**
-   - **Value to compare**: `1000`
-4. Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add a new event**.
+> 2. Vælg **+ Add condition**. Vælg `Red_hero`, søg efter `Y position`, og vælg **Y
+>    position** under **Position**.
+> 3. Sæt **Sign of the test** til **> (greater than)** og **Value to compare** til `1000`
+>    **(1)**.
+> 4. Vælg **Ok**.
+{: .lesson-action}
 
 ![Conditionen Y position med tegnet greater than og værdien 1000](images/05-y-position.png)
 
-5. **+ Add action** → **Change the scene** → **You Lose**. Tryk **Ok**.
+> **GØR DETTE**
+>
+> Tilføj actionen **Change the scene**, sæt scenen til **You Lose**, og vælg **Ok**.
+{: .lesson-action}
 
-### Hvad betyder Y og 1000?
-
-Y er **højden** i spillet, og den tælles **nedad**: helt oppe i venstre hjørne er Y lig `0`,
-og tallet bliver **større**, jo længere ned man kommer.
-
-Din skærm er `720` høj. Så når helten er nået til Y over `1000`, er han langt under
-skærmen — og der er ingen vej tilbage. Det er dét, tallet betyder.
-
-> 💡 Du behøver ikke en condition om, at han falder. Kommer han først under `1000`, er han
-> faldet. Ét tjek er nok.
+> **VIDEN**
+>
+> Y er højden i spillet. Tallet bliver større, jo længere ned helten kommer. Skærmen er
+> `720` høj, så `1000` er langt under skærmen. Du behøver ikke også tjekke, om helten falder.
+{: .lesson-info}
 
 ![De to nye events nederst på Game-scenens Events-side](images/06-death-events.png)
 
@@ -173,61 +208,79 @@ skærmen — og der er ingen vej tilbage. Det er dét, tallet betyder.
 
 ## Hele koden samlet
 
-De tre nye events i denne lektion:
-
-| Scene | Conditions (HVIS) | Actions (SÅ) |
-|---|---|---|
-| `Game` | `Red_hero` **is in collision with** `Monster`<br>`Red_hero` **is on floor** | Change to scene `"You Lose"` |
-| `Game` | **The Y position of** `Red_hero` **>** `1000` | Change to scene `"You Lose"` |
-| `You Lose` | **The cursor/touch is on** `TryAgainText`<br>**Touch or "Left" mouse button is down** | Change to scene `"Game"` |
+> **VIDEN**
+>
+> De tre nye events:
+>
+> | Scene | Conditions (HVIS) | Actions (SÅ) |
+> |---|---|---|
+> | `Game` | `Red_hero` **is in collision with** `Monster`<br>`Red_hero` **is on floor** | Change to scene `"You Lose"` |
+> | `Game` | **The Y position of** `Red_hero` **>** `1000` | Change to scene `"You Lose"` |
+> | `You Lose` | **The cursor/touch is on** `TryAgainText`<br>**Touch or "Left" mouse button is down** | Change to scene `"Game"` |
+{: .lesson-info}
 
 ---
 
 ## Prøv spillet! 🎮
 
-Tryk på **Preview** — husk, at spillet starter i **menuen**.
+> **GØR DETTE**
+>
+> 1. Vælg **Preview**, og vælg **Start** i menuen.
+> 2. Saml et par mønter.
+> 3. Løb ind i monsteret fra siden.
+> 4. Vælg **Try again!**, og hop så ud over kanten.
+> 5. Gem med **Ctrl + S**.
+{: .lesson-action}
 
-1. Klik **Start** → du er i banen
-2. Saml et par mønter, så der står point på skærmen
-3. **Løb ind i monsteret fra siden** → **You Lose....** 💀
-4. Klik på **Try again!** → du er tilbage i banen, og scoren er `0` igen
-5. **Hop ud over kanten** → **You Lose....** igen
+> **VIDEN**
+>
+> Når monsteret rammer helten fra siden, eller helten falder ud over kanten, åbner **You
+> Lose....**. Når du prøver igen, starter banen med `0` point.
+{: .lesson-info}
 
-Husk **Ctrl + S**.
-
-> 💡 Vil du hurtigt teste uden at klikke gennem menuen, kan du åbne `Game`-scenen og trykke
-> **Preview** derfra.
+> **VIDEN**
+>
+> Vil du teste banen uden menuen? Åbn `Game`, og vælg **Preview**.
+{: .lesson-info}
 
 ---
 
 ## Ekstra: tegn en Play-knap i Piskel
 
-Vil du have en rigtig knap i stedet for bare et ord, kan du tegne en:
+> **GØR DETTE**
+>
+> Vil du tegne en knap i stedet for at bruge teksten?
+> 1. Vælg **+ Add object** → **New object from scratch** → **Sprite**.
+> 2. Kald den `PlayButton`, og vælg **Edit with Piskel**.
+> 3. Tegn en trekant, der peger til højre.
+> 4. Gem, vælg **Apply**, og træk knappen under `Try again!`.
+> 5. I conditionen **The cursor/touch is on an object** skal du vælge `PlayButton` i stedet
+>    for `TryAgainText`.
+{: .lesson-action}
 
-1. **+ Add object** → **New object from scratch** → **Sprite**
-2. Kald den `PlayButton`, og tryk **Edit with Piskel**
-3. Tegn en trekant, der peger mod højre — som ▶ på en fjernbetjening
-4. Gem, tryk **Apply**, og træk den ind under `Try again!`
-
-Byt så `TryAgainText` ud med `PlayButton` i din condition **The cursor/touch is on an
-object**, så virker knappen i stedet for teksten.
-
-> 💡 **Piskel** er tegneprogrammet inde i GDevelop. Det virker kun i den **installerede**
-> udgave — ikke i browseren.
+> **VIDEN**
+>
+> **Piskel** er tegneprogrammet i GDevelop. Det virker kun i den installerede udgave, ikke i
+> browseren.
+{: .lesson-info}
 
 ---
 
 ## Du er færdig med YOU LOSE ✅
 
-- [ ] `You Lose` har en baggrundsfarve
-- [ ] Der står **You Lose....** i hvid og **Try again!** i magenta
-- [ ] Et klik på **Try again!** starter `Game` forfra
-- [ ] Helten dør, når monsteret rammer ham, mens han står på jorden
-- [ ] Helten dør, hvis han falder ud over kanten
-- [ ] Man kan stadig besejre monsteret ved at hoppe oven på det
-
-**Næste gang** får vi **kameraet** til at følge helten, så banen kan blive større end
-skærmen.
+> **VIDEN**
+>
+> Du er klar til næste lektion, når:
+>
+> - `You Lose` har en baggrundsfarve.
+> - `You Lose....` er hvid, og `Try again!` er magenta.
+> - **Try again!** starter `Game` forfra.
+> - Helten taber, hvis monsteret rammer ham på jorden.
+> - Helten taber, hvis han falder ud over kanten.
+> - Du stadig kan besejre monsteret ved at hoppe oven på det.
+>
+> Næste gang får du kameraet til at følge helten.
+{: .lesson-info}
 
 ---
 
@@ -235,17 +288,21 @@ skærmen.
 
 | Problem | Løsning |
 |---|---|
-| Helten dør med det samme, når spillet starter | Værdien i **Value to compare** er for lille. Prøv `1200`. Eller tegnet står på **<** i stedet for **>**. |
-| Helten dør slet ikke, når han falder | Tjek at der står **> (greater than)** i **Sign of the test**. Står der `=`, rammer han aldrig præcis det tal. |
-| Monsteret dør, når jeg løber ind i det | Du har glemt conditionen **Is on floor** på det nye event. |
-| Helten dør, når jeg hopper oven på monsteret | Du har byttet om: det nye event skal have **Is on floor**, og det gamle fra FJENDER skal have **Is falling**. |
-| Der sker ingenting, når jeg klikker på **Try again!** | Tjek at **Button to check** står på **Left (primary)**, og at conditionen peger på `TryAgainText`. |
-| Jeg kan ikke se mine tekster | De er sorte på mørk baggrund — sæt **Color**. Eller du har glemt at trække dem ind på scenen. |
-| Jeg havner i `You Lose` igen og igen | Din action heder **Stop and go back to previous scene** i stedet for **Change the scene**. |
-| **Objects**-panelet er tomt i `You Lose` | Det skal det være! Hver scene har sine egne objekter. |
-| Jeg skifter til den forkerte scene | Åbn actionen igen og tjek **Name of the new scene**. |
+| Helten taber, når spillet starter | **GØR DETTE:** Sæt **Value to compare** til `1200`, eller ret tegnet til **>**. |
+| Helten taber ikke, når han falder | **GØR DETTE:** Sæt **Sign of the test** til **> (greater than)**. |
+| Monsteret dør, når jeg løber ind i det | **GØR DETTE:** Tilføj conditionen **Is on floor** til det nye event. |
+| Helten taber, når jeg hopper på monsteret | **GØR DETTE:** Sæt **Is on floor** på det nye event og **Is falling** på eventet fra FJENDER. |
+| Der sker ingenting, når jeg klikker på **Try again!** | **GØR DETTE:** Sæt **Button to check** til **Left (primary)**, og vælg `TryAgainText`. |
+| Jeg kan ikke se mine tekster | **GØR DETTE:** Sæt **Color**, og træk teksterne ind på scenen. |
+| Jeg havner i `You Lose` igen og igen | **GØR DETTE:** Brug **Change the scene**, ikke **Stop and go back to previous scene**. |
+| **Objects** er tomt i `You Lose` | **VIDEN:** Det er normalt. Hver scene har sine egne objekter. |
+| Jeg skifter til den forkerte scene | **GØR DETTE:** Åbn actionen, og tjek **Name of the new scene**. |
+{: .lesson-help}
 
 ---
 
-Opgaverne bygger på det oprindelige GDevelop-forløb fra
-[mom2day.dk/gdevelop-advanced-you-lose](https://mom2day.dk/gdevelop-advanced-you-lose). 🙏
+> **VIDEN**
+>
+> Opgaverne bygger på det oprindelige GDevelop-forløb fra
+> [mom2day.dk/gdevelop-advanced-you-lose](https://mom2day.dk/gdevelop-advanced-you-lose).
+{: .lesson-info}

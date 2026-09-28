@@ -1,188 +1,274 @@
 # OPGAVER TIL GDevelop – ADVANCED – SCENER
 
-Indtil nu har hele dit spil boet i **én** skærm. Men et rigtigt spil har flere: en
-**startmenu**, selve **banen**, en **du vandt**-skærm og en **du tabte**-skærm.
-
-I GDevelop hedder en skærm en **scene**. I denne lektion laver du fire af dem og får menuen
-til at starte spillet.
-
-> 🟡 **Om billederne:** de gule kasser viser, hvor du skal klikke.
+> **VIDEN**
+>
+> Et spil kan have flere skærme: en menu, en bane, en sejrsskærm og en tabsskærm. I GDevelop
+> kaldes hver skærm en **scene**. I denne lektion laver du fire scener og får menuen til at
+> starte spillet.
+>
+> Knapperne står på engelsk. Vi skriver deres navne, som de står på skærmen. Bokse med hel
+> kant er **GØR DETTE**. Bokse med stiplet kant er **VIDEN**. Gule felter viser, hvor du
+> skal klikke. Tallene ved felterne passer til tallene i teksten.
+{: .lesson-info}
 
 ---
 
 ## Hvad er en scene?
 
-En **scene** er én skærm i spillet — med sine egne objekter, sin egen baggrund og sin egen
-Events-side.
-
-> ⚠️ **Vigtigt:** hver scene har sine **egne** objekter. De 15 figurer fra platformer-pakken
-> bor kun i din spil-scene. Laver du en ny scene, er den helt tom — også Objects-panelet.
-
-**Startscenen** er den scene, spillet åbner med. Den bestemmer du selv.
+> **VIDEN**
+>
+> En **scene** er én skærm i spillet. Hver scene har sin egen baggrund, sine objekter og sin
+> egen Events-side. En ny scene er tom. Figurerne fra spillet følger ikke med.
+>
+> **Startscenen** er den scene, der åbner først.
+{: .lesson-info}
 
 ---
 
 ## Opgave 1 – SCENER: Giv din scene et rigtigt navn
 
-Din scene hedder stadig `Untitled scene`. Det bliver forvirrende, når der bliver flere.
+> **VIDEN**
+>
+> Scenen hedder stadig `Untitled scene`. Det kan blive forvirrende, når der kommer flere.
+{: .lesson-info}
 
-1. Tryk på **☰** helt oppe i venstre hjørne for at åbne **Project manager**.
-2. Find afsnittet **Scenes**.
+> **GØR DETTE**
+>
+> 1. Vælg **☰** **(1)** øverst til venstre for at åbne **Project manager**.
+> 2. Find afsnittet **Scenes**.
+{: .lesson-action}
 
 ![Project manager med afsnittet Scenes og din scene](images/01-scenes-panel.png)
 
-3. Klik på de **tre prikker ⋮** ude til højre på scenens linje.
-4. Vælg **Rename**, skriv `Game`, og tryk **Enter**.
+> **GØR DETTE**
+>
+> 1. Vælg de tre prikker **⋮** **(2)** ved scenen.
+> 2. Vælg **Rename** **(1)**, skriv `Game`, og tryk **Enter**.
+{: .lesson-action}
 
 ![Menuen for en scene med Rename, Set as start scene og de andre punkter](images/02-scene-menu.png)
 
-Læg mærke til, hvad der ellers står i menuen — vi skal bruge **Set as start scene** om lidt.
+> **VIDEN**
+>
+> I menuen findes også **Set as start scene**. Den bruger du om lidt.
+{: .lesson-info}
 
 ---
 
 ## Opgave 2 – SCENER: Lav tre scener mere
 
-1. Tryk på **+** ude til højre for ordet **Scenes**.
-2. Der kommer en ny scene, og navnet kan skrives med det samme. Skriv `Menu`, og tryk
-   **Enter**.
-3. Gør det to gange mere, så du har scenerne `You Win` og `You Lose`.
+> **GØR DETTE**
+>
+> 1. Vælg **+** ved siden af **Scenes**.
+> 2. Skriv `Menu`, og tryk **Enter**.
+> 3. Lav to scener mere: `You Win` og `You Lose`.
+{: .lesson-action}
 
 ![Project manager med de fire scener Game, Menu, You Win og You Lose](images/03-four-scenes.png)
 
-Du har nu fire scener:
+> **VIDEN**
+>
+> Du har nu fire scener:
+{: .lesson-info}
 
-| Scene | Hvad den er til |
-|---|---|
-| `Menu` | Det første man ser. Her trykker man for at starte |
-| `Game` | Selve banen med helten, mønterne og monsteret |
-| `You Win` | Vises, når man er nået igennem |
-| `You Lose` | Vises, når man dør — den bruger vi i næste lektion |
+> **VIDEN**
+>
+> | Scene | Hvad den viser |
+> |---|---|
+> | `Menu` | Startknappen |
+> | `Game` | Banen, helten, mønterne og monsteret |
+> | `You Win` | Når du vinder |
+> | `You Lose` | Når du taber |
+{: .lesson-info}
 
 ---
 
 ## Opgave 3 – SCENER: Bestem hvilken scene spillet starter med
 
-Lige nu starter spillet i `Game`. Men man skal jo se menuen først.
+> **VIDEN**
+>
+> Spillet starter lige nu i `Game`. Det skal starte i menuen i stedet.
+{: .lesson-info}
 
-1. Klik på de **tre prikker ⋮** ved `Menu`.
-2. Vælg **Set as start scene**.
-
-Nu kommer der et lille **flag** ved `Menu` i listen. Flaget betyder: *"spillet starter her"*.
+> **GØR DETTE**
+>
+> 1. Vælg de tre prikker **⋮** ved `Menu`.
+> 2. Vælg **Set as start scene** **(1)**.
+{: .lesson-action}
 
 ![Scenelisten hvor Menu har et flag som markerer startscenen](images/04-start-scene-flag.png)
 
-> 💡 Rækkefølgen i listen betyder **ingenting**. Det er kun flaget, der bestemmer, hvor
-> spillet starter — så du behøver ikke flytte noget rundt.
+> **VIDEN**
+>
+> Flaget viser, at spillet starter i `Menu`. Rækkefølgen på listen betyder ikke noget.
+{: .lesson-info}
 
 ---
 
 ## Opgave 4 – SCENER: Giv menuen en baggrundsfarve
 
-1. Klik på **`Menu`** i listen for at åbne scenen.
-2. Luk **Project manager** med krydset.
-3. Kig i **Properties**-panelet i venstre side. Der står **Background color**.
-4. Skriv en farve i feltet — tre tal for rød, grøn og blå. Prøv `40;44;90`, som er en
-   mørkeblå nattehimmel.
+> **GØR DETTE**
+>
+> 1. Vælg `Menu` i listen.
+> 2. Luk **Project manager** med krydset.
+> 3. I **Properties** til venstre skal du finde **Background color** **(1)**.
+> 4. Skriv `40;44;90` for at få en mørkeblå baggrund.
+{: .lesson-action}
 
 ![Menu-scenen med Background color sat til mørkeblå](images/05-background-color.png)
 
-> 💡 Du kan også klikke på den lille firkant ved siden af feltet og vælge en farve med
-> musen. Prøv dig frem — det er din menu.
+> **GØR DETTE**
+>
+> Vil du selv vælge farven? Vælg den lille firkant ved siden af feltet, og klik på en farve.
+{: .lesson-action}
 
 ---
 
 ## Opgave 5 – SCENER: Lav en Start-knap
 
-Vi bruger et **Text**-objekt som knap — præcis som `ScoreText` i lektion 4.
+> **VIDEN**
+>
+> Du laver startknappen med et **Text**-objekt. Det er ligesom `ScoreText` fra lektion 4.
+{: .lesson-info}
 
-1. Tryk på **+ Add object** i **Objects**-panelet.
-2. Vælg fanen **New object from scratch**, søg efter `text`, og vælg **Text**.
-3. Udfyld:
-   - **Object name**: `StartText`
-   - **Size**: `60`
-   - **Initial text to display**: `Start`
-4. Tryk **Apply**.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add object** i **Objects**.
+> 2. Vælg **New object from scratch**, søg efter `text`, og vælg **Text**.
+> 3. Udfyld felterne:
+>    - **Object name** **(1)**: `StartText`
+>    - **Size** **(2)**: `60`
+>    - **Initial text to display** **(3)**: `Start`
+> 4. Vælg **Apply**.
+{: .lesson-action}
 
 ![Boksen Edit StartText med navn, størrelse 60 og teksten Start](images/06-start-text.png)
 
-5. Teksten er sort, og baggrunden er mørkeblå — så kan man ikke se den. Klik på
-   `StartText` i **Objects**-panelet, find **Color** i **Properties** til venstre, og skriv
-   `255;255;255`. Nu er teksten hvid.
-6. **Træk `StartText` ind på scenen**, og placér den midt på skærmen.
+> **GØR DETTE**
+>
+> 1. Vælg `StartText` i **Objects**.
+> 2. I **Properties** til venstre skal du finde **Color**. Skriv `255;255;255` for at gøre
+>    teksten hvid.
+> 3. Træk `StartText` ind på scenen. Sæt den midt på skærmen.
+{: .lesson-action}
 
-> ✏️ **Ekstra:** vil du have en ramme om ordet, kan du lave et **Sprite**-objekt og tegne en
-> kasse med **Piskel** — ligesom du gjorde med pilene i FJENDER. Træk kassen ind bag
-> teksten.
+> **GØR DETTE**
+>
+> Vil du tegne en ramme om ordet? Lav et **Sprite**-objekt, tegn en kasse med **Piskel**, og
+> træk den ind bag teksten.
+{: .lesson-action}
 
 ---
 
 ## Opgave 6 – SCENER: Få knappen til at starte spillet
 
-Åbn fanen **Menu (Events)** foroven. Den er tom — hver scene har sin egen kode.
+> **VIDEN**
+>
+> Hver scene har sin egen Events-side. Åbn **Menu (Events)**.
+{: .lesson-info}
 
-1. Tryk **+ Add an event**.
-2. **+ Add condition** → vælg objektet **`StartText`** → søg efter `cursor` →
-   vælg **The cursor/touch is on an object**. Tryk **Ok**.
-3. **+ Add condition** igen → fanen **Other conditions** → søg efter `mouse button` →
-   vælg **Mouse button pressed or touch held**.
-4. I feltet **Button to check** vælger du **Left (primary)**. Tryk **Ok**.
-5. **+ Add action** → søg efter `change to scene` → vælg **Change the scene**.
-6. I **Name of the new scene** vælger du **Game**. Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Åbn fanen **Menu (Events)**.
+> 2. Vælg **+ Add an event**.
+> 3. Vælg **+ Add condition**. Vælg `StartText`, søg efter `cursor`, og vælg
+>    **The cursor/touch is on an object**. Vælg **Ok**.
+> 4. Vælg **+ Add condition** igen. Under **Other conditions**, søg efter `mouse button`, og
+>    vælg **Mouse button pressed or touch held**.
+> 5. Sæt **Button to check** til **Left (primary)**. Vælg **Ok**.
+> 6. Vælg **+ Add action**. Søg efter `change to scene`, og vælg **Change the scene**.
+> 7. Sæt **Name of the new scene** til **Game**, og vælg **Ok**.
+{: .lesson-action}
 
 ![Menu-scenens færdige event der skifter til scenen Game](images/07-menu-event.png)
 
-Eventet betyder: **HVIS** musen er over `StartText` **OG** man trykker venstre museknap,
-**SÅ** skift til scenen `Game`.
+> **VIDEN**
+>
+> Eventet betyder: Når musen er over `StartText`, og du trykker venstre museknap, går spillet
+> til `Game`.
+{: .lesson-info}
 
-> 💡 De **to** conditions i samme event betyder **og** — begge skal passe på én gang. Du
-> behøver ikke noget særligt til det; det er sådan events virker.
+> **VIDEN**
+>
+> De to conditions betyder **og**. Begge skal passe.
+{: .lesson-info}
 
-> 💡 Der findes også en action, der heder **Stop and go back to previous scene**. Den er
-> perfekt til en "tilbage til menuen"-knap senere.
+> **VIDEN**
+>
+> **Stop and go back to previous scene** kan bruges til en tilbageknap senere.
+{: .lesson-info}
 
 ---
 
 ## Opgave 7 – SCENER: Lav You Win-skærmen
 
-Nu kan du det hele selv. Åbn scenen **`You Win`** og gør præcis som i Opgave 4 og 5:
+> **VIDEN**
+>
+> Du kan bruge de samme trin som for `Menu` til at lave en baggrund og en tekst.
+{: .lesson-info}
 
-1. Giv scenen en **baggrundsfarve** — måske en glad grøn, fx `30;90;60`.
-2. Lav et **Text**-objekt:
-   - **Object name**: `WinText`
-   - **Size**: `70`
-   - **Initial text to display**: `You Win!!`
-   - **Color**: `255;255;255`
-3. Træk det ind midt på scenen.
+> **GØR DETTE**
+>
+> 1. Åbn scenen `You Win`.
+> 2. Giv den en baggrundsfarve, fx `30;90;60`.
+> 3. Lav et **Text**-objekt med disse indstillinger:
+>    - **Object name**: `WinText`
+>    - **Size**: `70`
+>    - **Initial text to display**: `You Win!!`
+>    - **Color**: `255;255;255`
+> 4. Træk teksten ind midt på scenen.
+{: .lesson-action}
 
-`You Lose` lader vi stå tom — den laver vi færdig i næste lektion.
+> **VIDEN**
+>
+> `You Lose` står tom indtil næste lektion. Der gør du den færdig.
+{: .lesson-info}
 
 ---
 
 ## Prøv spillet! 🎮
 
-Tryk på **Preview**.
+> **GØR DETTE**
+>
+> Vælg **Preview**. Klik på **Start** i menuen.
+{: .lesson-action}
 
-Nu starter spillet i **menuen** med din mørkeblå baggrund og ordet **Start**.
-Klik på **Start** — og du er inde i banen med helten, mønterne og monsteret.
+> **VIDEN**
+>
+> Spillet starter i menuen. Når du klikker **Start**, går du til banen.
+{: .lesson-info}
 
-Husk **Ctrl + S**.
+> **GØR DETTE**
+>
+> Gem med **Ctrl + S**.
+{: .lesson-action}
 
-> 💡 Preview starter altid i **startscenen** — den med flaget. Vil du hurtigt teste banen
-> uden at klikke gennem menuen, kan du åbne `Game`-scenen og trykke **Preview** derfra.
+> **VIDEN**
+>
+> **Preview** starter i startscenen — den med flaget. Vil du prøve banen direkte, åbn `Game`,
+> og vælg **Preview** der.
+{: .lesson-info}
 
 ---
 
 ## Du er færdig med SCENER ✅
 
-- [ ] Min gamle scene heder nu **`Game`**
-- [ ] Der er fire scener: `Menu`, `Game`, `You Win`, `You Lose`
-- [ ] `Menu` har **flaget** — spillet starter der
-- [ ] Menuen har en baggrundsfarve og et hvidt **`Start`**
-- [ ] Et klik på **Start** skifter til `Game`
-- [ ] `You Win` har en baggrundsfarve og teksten **You Win!!**
+> **VIDEN**
+>
+> Du er klar til næste lektion, når:
+>
+> - Din gamle scene hedder `Game`.
+> - Der er fire scener: `Menu`, `Game`, `You Win` og `You Lose`.
+> - `Menu` har flaget og starter spillet.
+> - Menuen har en farve og en hvid `Start`-tekst.
+> - **Start** åbner `Game`.
+> - `You Win` har en farve og teksten **You Win!!**.
+{: .lesson-info}
 
-**Næste gang** laver vi **You Lose**-skærmen færdig — og så kan helten endelig dø, når
-monsteret rammer ham.
+> **VIDEN**
+>
+> Næste gang gør du **You Lose**-skærmen færdig og får helten til at tabe, når monsteret rammer.
+{: .lesson-info}
 
 ---
 
@@ -190,15 +276,19 @@ monsteret rammer ham.
 
 | Problem | Løsning |
 |---|---|
-| Spillet starter i banen i stedet for menuen | `Menu` mangler flaget. Tryk **⋮** ved `Menu` → **Set as start scene**. |
-| Objects-panelet er tomt i den nye scene | Det skal det være! Hver scene har sine egne objekter. Menuen skal kun have `StartText`. |
-| Jeg kan ikke se min Start-tekst | Den er sort på mørk baggrund. Sæt **Color** til `255;255;255`. Eller du har glemt at trække den ind på scenen. |
-| Der sker ingenting, når jeg klikker på Start | Tjek at **Button to check** står på **Left (primary)** — står der rød tekst i eventet, mangler den. |
-| Jeg skifter til den forkerte scene | Åbn actionen igen og tjek **Name of the new scene**. Der skal stå `Game`. |
-| Jeg kan ikke finde conditionen med cursoren | Søg kun på `cursor`. Den heder **The cursor/touch is on an object** og ligger under **General › Objects › Mouse and touch**. |
-| Jeg gav en scene et forkert navn | **⋮** → **Rename**. Husk at rette scenenavnet i dine **Change the scene**-actions bagefter. |
+| Spillet starter i banen i stedet for menuen | **GØR DETTE:** Vælg **⋮** ved `Menu` → **Set as start scene**. |
+| Objects-panelet er tomt i den nye scene | **VIDEN:** Det er normalt. Hver scene har sine egne objekter. Menuen skal kun have `StartText`. |
+| Jeg kan ikke se min Start-tekst | **GØR DETTE:** Sæt **Color** til `255;255;255`, og træk teksten ind på scenen. |
+| Der sker ingenting, når jeg klikker på Start | **GØR DETTE:** Tjek at **Button to check** er **Left (primary)**. |
+| Jeg skifter til den forkerte scene | **GØR DETTE:** Åbn actionen, og sæt **Name of the new scene** til `Game`. |
+| Jeg kan ikke finde conditionen med cursoren | **GØR DETTE:** Søg efter `cursor`. Vælg **The cursor/touch is on an object**. |
+| Jeg gav en scene et forkert navn | **GØR DETTE:** Vælg **⋮** → **Rename**. Ret også scenenavnet i dine **Change the scene**-actions. |
+{: .lesson-help}
 
 ---
 
-Opgaverne bygger på det oprindelige GDevelop-forløb fra
-[mom2day.dk/gdevelop-advanced-scener](https://mom2day.dk/gdevelop-advanced-scener). 🙏
+> **VIDEN**
+>
+> Opgaverne bygger på det oprindelige GDevelop-forløb fra
+> [mom2day.dk/gdevelop-advanced-scener](https://mom2day.dk/gdevelop-advanced-scener).
+{: .lesson-info}

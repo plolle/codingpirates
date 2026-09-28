@@ -1,203 +1,259 @@
 # OPGAVER TIL GDevelop – INTRO
 
-Velkommen! I denne første del gør du GDevelop klar, laver dit projekt og henter den grafik,
-vi skal bruge til vores platformspil. Når du er færdig, er du klar til at bygge selve spillet.
+> **VIDEN**
+>
+> I bokse med en hel kant står der, hvad du skal gøre. I bokse med en stiplet kant står der
+> viden, som hjælper dig med at forstå det, du laver.
+>
+> På billederne viser gule kasser, hvor du skal klikke. Tallene i gule cirkler passer til
+> tallene i trinene, fx **(1)** og **(2)**.
+{: .lesson-info}
 
-Alle knapper i GDevelop står på engelsk. Derfor skriver vi knappernes navne **præcis som de
-står på skærmen** — fx **Create new game** — mens forklaringerne er på dansk.
+## Opgave 1 – Hent og åbn GDevelop
 
-> 🟡 **Om billederne:** de gule kasser viser, hvor du skal klikke. Tallene i de gule cirkler
-> passer til tallene i teksten, fx **(1)** og **(2)**.
+> **VIDEN**
+>
+> Vi bruger programmet på din computer. Så bliver spillet gemt på din computer. Du behøver
+> ikke logge ind for at lave spillet.
+{: .lesson-info}
 
----
+> **GØR DETTE**
+>
+> 1. Gå til **[gdevelop.io/download](https://gdevelop.io/download)**.
+> 2. Hent udgaven til **Windows**, og installér den.
+> 3. Åbn **GDevelop** fra Start-menuen.
+{: .lesson-action}
 
-## Opgave 1 – INTRO: Hent og installér GDevelop
+> **VIDEN**
+>
+> Knapperne i GDevelop står på engelsk. Vi skriver deres navne, som de står på skærmen.
+> Det hjælper dig med at finde den rigtige knap.
+{: .lesson-info}
 
-Vi bruger **programmet på din egen computer**. Så ligger dit spil som en almindelig fil på
-maskinen, du behøver ikke logge ind, og du kan arbejde videre, selvom der ikke er internet.
+> **GØR DETTE**
+>
+> Hvis dine knapper står på dansk:
+> 1. Vælg **Preferences** nederst i menuen til venstre.
+> 2. Vælg **English** som sprog.
+{: .lesson-action}
 
-1. Gå ind på **[gdevelop.io/download](https://gdevelop.io/download)**
-2. Hent udgaven til **Windows**, og installér den.
-3. Start **GDevelop** fra Start-menuen.
+> **VIDEN**
+>
+> Billederne i vejledningen er fra GDevelop i en browser. Programmet på din computer ser
+> næsten ens ud. Du vælger kun et andet sted at gemme spillet i Opgave 2.
+{: .lesson-info}
 
-> 💡 **Står dine knapper på dansk?** Så passer de ikke til vejledningen, for vi skriver alle
-> knapnavne på engelsk. Gå til **Preferences** nederst i menuen til venstre, og sæt sproget
-> til **English**.
+## Opgave 2 – Lav dit første spilprojekt
 
-> 📷 **Om skærmbillederne:** de er taget i browserudgaven af GDevelop. Programmet på din PC
-> ser præcis ens ud — den eneste forskel, du vil lægge mærke til, er i **Opgave 2**, hvor du
-> vælger, *hvor* spillet skal gemmes.
-
----
-
-## Opgave 2 – INTRO: Lav dit første projekt
-
-I menuen til venstre er der fem punkter: **Learn**, **Create**, **Play**, **Shop** og
-**Teach**.
-
-1. Vælg **Create** **(1)** i menuen til venstre.
-2. Tryk på knappen **+ Create new game** **(2)** ude til højre.
+> **GØR DETTE**
+>
+> 1. Vælg **Create** **(1)** i menuen til venstre.
+> 2. Vælg **+ Create new game** **(2)** til højre.
+{: .lesson-action}
 
 ![Create-siden i GDevelop med menuen til venstre og knappen Create new game til højre](images/01-create-page.png)
 
-> 💡 Der er meget andet på siden — et felt der hedder **What would you like to create?**,
-> hvor en robot kan lave spillet for dig, og en **Wallet** med mønter. Det skal vi ikke
-> bruge. Vi bygger selv!
+> **VIDEN**
+>
+> På siden er der også en robot, som kan lave et spil for dig, og en **Wallet** med mønter.
+> De hører ikke til i denne lektion.
+{: .lesson-info}
 
-3. Nu åbner boksen **Create a new game**. Vælg **Empty project** — det tomme projekt.
+> **GØR DETTE**
+>
+> 1. Vælg **Empty project** — det tomme projekt.
+> 2. Vælg ikke skabelonen **Platformer**.
+{: .lesson-action}
 
 ![Boksen Create a new game med Empty project øverst til venstre og en række færdige skabeloner](images/02-new-game-dialog.png)
 
-> ⚠️ Der ligger også en skabelon, der hedder **Platformer**. Den lyder rigtig — men vælg
-> den **ikke**! Så er spillet nemlig lavet på forhånd, og så er der ikke noget tilbage at
-> lære. Vi starter fra bunden.
+> **VIDEN**
+>
+> **Platformer** er et spil, der allerede er lavet. Vi starter med et tomt projekt, så du
+> kan lære at bygge spillet selv.
+{: .lesson-info}
 
-4. Lad skærmstørrelsen stå på **Desktop & Mobile landscape (1280x720)**.
-5. I feltet **Project name** **(1)** står der et tilfældigt navn, fx *Didactic Structure*.
-   **Slet det**, og skriv i stedet: `Platformspil1`
-6. I feltet **Where to store this project** **(2)** vælger du **din egen computer** — og
-   peger på en mappe, du kan finde igen, fx `Dokumenter\GDevelop`.
-7. Tryk på **Create new game** **(3)**.
+> **GØR DETTE**
+>
+> 1. Lad skærmstørrelsen stå på **Desktop & Mobile landscape (1280x720)**.
+> 2. Find feltet **Project name** **(1)**. Slet navnet, og skriv `Platformspil1`.
+> 3. Find **Where to store this project** **(2)**. Vælg din egen computer.
+> 4. Vælg en mappe, du kan finde igen, fx `Dokumenter\GDevelop`.
+> 5. Vælg **Create new game** **(3)**.
+{: .lesson-action}
 
 ![Boksen med Project name udfyldt med Platformspil1, gemmested og knappen Create new game](images/03-project-setup.png)
 
-> ⚠️ **På billedet står der GDevelop Cloud** — det er fordi billedet er taget i browseren.
-> I programmet skal du vælge **din egen computer** i stedet, så spillet bliver gemt som en
-> fil hos dig.
+> **VIDEN**
+>
+> Billedet viser **GDevelop Cloud**, fordi det er taget i en browser. I programmet bliver
+> spillet gemt på din egen computer.
+{: .lesson-info}
 
-Nu åbner editoren, og du har en tom scene foran dig. Det er her, spillet skal bygges.
+> **VIDEN**
+>
+> Når editoren åbner, ser du en tom scene. En scene er det sted, hvor du bygger en bane.
+{: .lesson-info}
+
+> **VIDEN**
+>
+> Her er tre steder, du får brug for:
+>
+> - **(1)** **Objects** til højre — her finder du spillets figurer og klodser.
+> - **(2)** **Preview** øverst — her prøver du spillet.
+> - **(3)** **☰** øverst til venstre — her åbner du **Project manager**, hvor du finder dine scener.
+{: .lesson-info}
 
 ![GDevelops editor med en tom scene i midten og Objects-panelet til højre](images/04-editor.png)
 
-Læg mærke til de tre steder, du skal bruge hele kurset igennem:
+## Opgave 3 – Hent billeder til spillet
 
-- **(1)** **Objects**-panelet i **højre** side — her bor alle spillets figurer og klodser
-- **(2)** **Preview**-knappen **øverst** — den starter spillet, så du kan prøve det
-- **(3)** **☰**-knappen **helt oppe i venstre hjørne** — det er **Project manager**, hvor du
-  gemmer og finder dine scener
+> **VIDEN**
+>
+> I spillet bruger vi billeder af helten, jorden, mønter og andre ting. De kaldes **assets**.
+> Vi henter dem færdige, så du ikke selv skal tegne dem.
+{: .lesson-info}
 
----
+> **GØR DETTE**
+>
+> 1. Find **Objects**-feltet til højre.
+> 2. Vælg **+ Add object**.
+{: .lesson-action}
 
-## Opgave 3 – INTRO: Hent grafik til spillet
-
-"Assets" er den grafik, spillet er bygget af: figuren, jorden, mønterne, stigen og så videre.
-Dem henter vi færdige, så vi ikke selv skal tegne dem.
-
-1. Find **Objects**-panelet i højre side.
-2. Tryk på **+ Add object**.
-3. Boksen **New object** åbner på fanen **Asset Store**.
+> **VIDEN**
+>
+> Boksen **New object** åbner.
+{: .lesson-info}
 
 ![Boksen New object med fanen Asset Store og kategorierne](images/05-new-object.png)
 
-4. Skriv `GDevelop Platformer` i søgefeltet **Search assets**, og tryk **Enter**.
-5. Øverst i resultatet ser du pakken **GDevelop Platformer** med **15 Assets**. Klik på den.
+> **GØR DETTE**
+>
+> 1. Tjek, at fanen **Asset Store** er valgt.
+> 2. Skriv `GDevelop Platformer` i feltet **Search assets**, og tryk **Enter**.
+> 3. Vælg pakken **GDevelop Platformer** med **15 Assets**.
+{: .lesson-action}
 
 ![Søgeresultatet med pakken GDevelop Platformer og de 15 figurer under den](images/06-asset-search.png)
 
-> ⚠️ Der findes flere platformer-pakker i **Asset Store**. De er også fine, men resten af
-> kurset bruger grafikken fra **GDevelop Platformer**, så vælg den.
+> **VIDEN**
+>
+> Der findes flere pakker til platformspil. **GDevelop Platformer** er den, vi bruger i
+> resten af kurset.
+{: .lesson-info}
 
-6. Nu ser du pakkens side. Den er lavet af GDevelop og er gratis (**CC0**).
-7. Tryk på den blå knap nederst til højre: **Add these assets to my scene**.
+> **GØR DETTE**
+>
+> 1. Vælg **Add these assets to my scene** nederst til højre.
+> 2. Når GDevelop spørger, om du vil tilføje 15 assets, vælg **Add the assets**.
+> 3. Vælg **Close** for at lukke Asset Store.
+{: .lesson-action}
 
 ![Pakkens side med knappen Add these assets to my scene nederst til højre](images/07-asset-pack.png)
 
-8. GDevelop spørger, om du er sikker: *"You're about to add 15 assets."*
-   Tryk på **Add the assets**.
-
 ![Boksen der spørger om du vil tilføje 15 assets](images/08-add-confirm.png)
 
-9. Tryk på **Close** for at lukke Asset Store igen.
-
-**Sådan ved du, at det gik godt:** i **Objects**-panelet til højre står der nu 15 figurer
-under **Scene Objects**:
-
-`Monster` · `GreenHero` · `Moon` · `Clouds` · `Fly` · `Checkpoint` · `Coin` · `Door` ·
-`Red_hero` · `Ladder` · `Corner_platform` · `Platform_1` · `Platform_2` · `Platform_3` ·
-`Background`
+> **VIDEN**
+>
+> GDevelop har lavet pakken, og du må bruge den gratis (CC0). Når pakken er hentet, står der
+> 15 navne under **Scene Objects** i **Objects**-feltet:
+>
+> `Monster` · `GreenHero` · `Moon` · `Clouds` · `Fly` · `Checkpoint` · `Coin` · `Door` ·
+> `Red_hero` · `Ladder` · `Corner_platform` · `Platform_1` · `Platform_2` · `Platform_3` ·
+> `Background`
+{: .lesson-info}
 
 ![Objects-panelet til højre fyldt med de 15 figurer fra pakken](images/09-objects-list.png)
 
-> 💡 Læg mærke til, at der er **to** helte: `Red_hero` og `GreenHero`. Vi bruger
-> **`Red_hero`** i resten af kurset. Læg også mærke til understregerne i navnene —
-> det hedder `Platform_1`, ikke `Platform1`.
+> **VIDEN**
+>
+> Der er to helte: `Red_hero` og `GreenHero`. Vi bruger `Red_hero` i kurset. Navnene er
+> næsten ens, men `Platform_1` har en understreg, mens `Platform1` ikke har.
+{: .lesson-info}
 
----
+## Opgave 4 – Gem dit spil
 
-## Opgave 4 – INTRO: Gem dit projekt
+> **GØR DETTE**
+>
+> Tryk på **Ctrl + S** for at gemme dit spil.
+{: .lesson-action}
 
-Den nemmeste måde: tryk **Ctrl + S**.
-
-Du kan også gøre det gennem menuen:
-
-1. Tryk på **☰** helt oppe i venstre hjørne. Nu åbner **Project manager**.
+> **VIDEN**
+>
+> Du kan også gemme gennem menuen: **☰ → File → Save**.
+{: .lesson-info}
 
 ![Project manager med fanerne File, View og Help og en oversigt over spillet](images/10-project-manager.png)
 
-2. Vælg fanen **File** øverst.
-3. Vælg **Save**.
-
 ![File-menuen med punkterne Save og Save as...](images/11-file-menu.png)
 
-I samme menu finder du også:
+> **VIDEN**
+>
+> I menuen kan du også vælge:
+>
+> - **Save as…** — gemme en ekstra kopi med et nyt navn.
+> - **Export (web, iOS, Android)…** — gøre spillet klar, så andre kan spille det.
+>
+> Det er en god idé at gemme, når du har lavet noget, der virker. Så mister du ikke så meget,
+> hvis der sker en fejl.
+>
+> En stjerne `*` ved projektets navn betyder, at der er noget, du ikke har gemt endnu. Den
+> forsvinder, når du gemmer. Spillet ligger i mappen, du valgte i Opgave 2. Mappen rummer
+> hele spillet og billederne. Flyt hele mappen, hvis spillet skal flyttes.
+{: .lesson-info}
 
-- **Save as…** — gem en ekstra kopi under et nyt navn
-- **Export (web, iOS, Android)…** — lav spillet færdigt, så andre kan spille det
+## Prøv, om spillet virker
 
-> 💡 Gør det til en vane at trykke **Ctrl + S**, hver gang du har lavet noget, der virker.
-> Så mister du aldrig mere end et par minutters arbejde.
+> **GØR DETTE**
+>
+> 1. Vælg **Preview** øverst.
+> 2. Vent, til spillet åbner i et nyt vindue.
+> 3. Luk vinduet igen.
+{: .lesson-action}
 
-**Sådan ved du, at det er gemt:** stjernen `*` efter projektets navn i fanen forsvinder.
+> **VIDEN**
+>
+> Der sker ikke noget i spillet endnu. Det er helt fint. Vi har hentet figurerne, men ikke
+> sat dem ind i banen. Det er nok, at spillet åbner uden en fejl.
+{: .lesson-info}
 
-**Hvor ligger spillet nu?** I den mappe, du valgte i Opgave 2. Tag et kig i mappen — der
-ligger projektfilen sammen med den grafik, du hentede. Den mappe er hele dit spil, så flyt
-den ikke, uden at tage det hele med.
+## Du er færdig med INTRO
 
----
+> **VIDEN**
+>
+> Du er klar til næste lektion, når alt dette passer:
+>
+> - GDevelop er på min computer.
+> - Mit projekt hedder **Platformspil1**.
+> - Jeg ved, hvilken mappe projektet ligger i.
+> - Jeg kan se alle 15 assets i **Objects**-feltet.
+> - Jeg har gemt projektet.
+> - **Preview** åbner uden fejl.
+{: .lesson-info}
 
-## Prøv at det virker
-
-Tryk på **Preview** øverst i værktøjslinjen. Spillet starter i et nyt vindue.
-
-Der sker ingenting endnu — og det er helt rigtigt! Vi har kun *hentet* figurerne, ikke
-*placeret* dem i scenen. Så længe vinduet åbner uden en fejlbesked, er alt som det skal være.
-Luk vinduet igen.
-
----
-
-## Du er færdig med INTRO ✅
-
-Sæt et flueben ved hver ting, du har klaret:
-
-- [ ] GDevelop er installeret på min computer
-- [ ] Jeg har et projekt, der hedder **Platformspil1**
-- [ ] Jeg ved, hvilken mappe projektet ligger i
-- [ ] Alle 15 figurer fra **GDevelop Platformer** står i **Objects**-panelet
-- [ ] Projektet er gemt
-- [ ] **Preview** åbner uden fejl
-
-**Nu skal vi i gang med at bygge vores spil!**
-
-👉 Gå videre til **BEGYNDER**, hvor du lærer at sætte dine objekter ordentligt op med
-*behaviors* og *collision masks*.
-
----
+> **VIDEN**
+>
+> Næste gang bygger du videre på spillet. Du lærer at give helten evner og at få ham til at
+> gå og hoppe på platforme.
+{: .lesson-info}
 
 ## Hvis noget går galt
 
-| Problem | Løsning |
+| Problem | Prøv dette |
 |---|---|
-| Jeg kan ikke finde **+ Create new game** | Du står nok på **Learn**. Vælg **Create** i menuen til venstre først. |
-| Knappen **Create new game** er grå og kan ikke trykkes | Du har ikke valgt et gemmested. Vælg **din egen computer** under **Where to store this project**. |
-| GDevelop vil have, at jeg logger ind | Det behøver du ikke. Log ind-knapperne er kun til dem, der vil gemme i skyen — vi gemmer på maskinen. |
-| Mine knapper er på dansk | Gå til **Preferences** nederst til venstre, og sæt sproget til **English**. |
-| Jeg kan ikke finde mit projekt igen | Kig i den mappe, du valgte i Opgave 2. Du kan også åbne det med **☰ → File → Open…** |
-| **Asset Store** er tom eller loader ikke | Den kræver internet — også når programmet er installeret. Tjek din forbindelse, og prøv igen. |
-| Jeg valgte **Platformer**-skabelonen ved en fejl | Luk projektet, og start Opgave 2 forfra med **Empty project**. |
-| Jeg kan ikke finde `RedHero` | Den hedder `Red_hero` med en understreg. |
-| **Objects**-panelet er væk | Slå det til igen i **View**-menuen inde i **Project manager**. |
+| Jeg kan ikke finde **+ Create new game**. | **GØR DETTE:** Vælg **Create** i menuen til venstre. |
+| **Create new game** er grå. | **GØR DETTE:** Vælg din egen computer under **Where to store this project**. |
+| GDevelop beder mig om at logge ind. | **GØR DETTE:** Gem på din egen computer. Du behøver ikke logge ind. |
+| Knapperne står på dansk. | **GØR DETTE:** Vælg **Preferences** nederst til venstre, og vælg **English**. |
+| Jeg kan ikke finde mit projekt. | **GØR DETTE:** Kig i mappen fra Opgave 2. Du kan også vælge **☰ → File → Open…**. |
+| **Asset Store** er tom eller åbner ikke. | **GØR DETTE:** Tjek, at du har internet. Prøv så igen. |
+| Jeg kom til at vælge **Platformer**. | **GØR DETTE:** Luk projektet. Start Opgave 2 igen, og vælg **Empty project**. |
+| Jeg kan ikke finde `RedHero`. | **GØR DETTE:** Søg efter `Red_hero` med understreg. |
+| **Objects**-feltet er væk. | **GØR DETTE:** Åbn **View** i **Project manager**, og slå **Objects** til. |
+{: .lesson-help}
 
----
-
-Opgaverne bygger på det oprindelige GDevelop-forløb fra
-[mom2day.dk/gdevelop](https://mom2day.dk/gdevelop). 🙏
+> **VIDEN**
+>
+> Opgaverne bygger på det oprindelige GDevelop-forløb fra
+> [mom2day.dk/gdevelop](https://mom2day.dk/gdevelop).
+{: .lesson-info}

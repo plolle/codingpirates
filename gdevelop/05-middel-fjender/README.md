@@ -1,98 +1,134 @@
 # OPGAVER TIL GDevelop – MIDDEL – FJENDER
 
-Nu bliver spillet farligt. Du skal lave et **monster, der går frem og tilbage** på en
-platform — og som du kan besejre ved at hoppe oven på det.
-
-Undervejs lærer du to nye ting: **objekt-variabler** og **kræfter (forces)**.
-
-> 🟡 **Om billederne:** de gule kasser viser, hvor du skal klikke.
+> **VIDEN**
+>
+> I denne lektion laver du et monster, der går frem og tilbage på en platform. Du kan besejre
+> det ved at hoppe oven på det.
+>
+> Knapperne står på engelsk. Vi skriver deres navne, som de står på skærmen. Bokse med hel
+> kant er **GØR DETTE**. Bokse med stiplet kant er **VIDEN**. Gule felter viser, hvor du
+> skal klikke. Tallene ved felterne passer til tallene i teksten.
+{: .lesson-info}
 
 ---
 
 ## Tre ord du skal kende
 
-**Objekt-variabel** — en variabel, der hører til **ét bestemt objekt**. `Score` fra sidste
-lektion var *global* — hele spillet deler den. Men hvert monster skal huske sin **egen**
-retning, så den variabel skal bo på monsteret.
-
-**Boolean** — en variabel, der kun kan være **true** (sand) eller **false** (falsk). Perfekt
-til ja/nej-spørgsmål som *"går monsteret til højre?"*.
-
-**Force** — et skub. I stedet for at flytte monsteret et bestemt antal pixels, skubber vi
-det med en fart, fx **80 pixels i sekundet**.
+> **VIDEN**
+>
+> En **objekt-variabel** hører til ét objekt. Hvert monster skal huske sin egen retning.
+>
+> En **Boolean** kan være **True** (ja) eller **False** (nej).
+>
+> En **force** er et skub, der får en figur til at bevæge sig.
+{: .lesson-info}
 
 ---
 
 ## Sådan virker et monster på patrulje
 
-Trickset er enkelt, når man først har set det:
-
-1. Vi lægger to **usynlige vendepunkter** i hver ende af platformen.
-2. Monsteret skubbes hele tiden mod den ene side.
-3. Rører det et vendepunkt, **vender det om**.
-
-Vendepunkterne er bare to almindelige objekter, vi **skjuler**, når spillet starter. Fordi
-de er usynlige, betyder det ikke noget, hvordan de ser ud — men pile er nemme at forstå,
-mens man bygger.
+> **VIDEN**
+>
+> Vi sætter to pile ved enderne af platformen og skjuler dem, når spillet starter. Monsteret
+> går mod den ene pil. Når det rører pilen, vender det om.
+{: .lesson-info}
 
 ---
 
 ## Opgave 1 – FJENDER: Hent to pile
 
-1. Tryk **+ Add object** → fanen **Asset Store**.
-2. Tryk på **hus-ikonet** ved siden af søgefeltet, så du kommer ud af den pakke, du
-   sidst kiggede i.
-3. Søg efter `arrow`.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add object** → **Asset Store**.
+> 2. Vælg hus-ikonet **(1)** ved søgefeltet.
+> 3. Søg efter `arrow`.
+> 4. Find **Left-Arrow** **(2)**, og vælg den.
+> 5. Du skal også bruge **Right-Arrow** **(3)**. Du vælger den efter Left-Arrow.
+{: .lesson-action}
 
 ![Asset Store med mange pile efter en søgning på arrow](images/01-arrow-search.png)
 
-4. Find **Left-Arrow**, klik på den, og tryk **Add to the scene**.
+> **GØR DETTE**
+>
+> På siden for **Left-Arrow** vælger du **Add to the scene** **(1)**.
+{: .lesson-action}
 
 ![Siden for Left-Arrow med knappen Add to the scene](images/02-add-arrow.png)
 
-5. Tryk **Back**, find **Right-Arrow**, og gør det samme.
-6. Luk med **Close**.
+> **GØR DETTE**
+>
+> 1. Vælg **Back**, og vælg **Right-Arrow** i søgeresultatet.
+> 2. Vælg **Add to the scene**.
+> 3. Vælg **Close**.
+{: .lesson-action}
 
-Objekterne hedder nu **`Left_Arrow`** og **`Right_Arrow`** i **Objects**-panelet.
+> **VIDEN**
+>
+> I **Objects** hedder pilene nu `Left_Arrow` og `Right_Arrow`.
+{: .lesson-info}
 
-> ✏️ **Vil du hellere tegne dine egne pile?**
-> Det kan du godt. Vælg **+ Add object** → **New object from scratch** → **Sprite** →
-> **Edit with Piskel**, tegn din pil, og gem den. Kald objekterne `Left_Arrow` og
-> `Right_Arrow`, så passer resten af opgaven. Pilene bliver alligevel skjult, når spillet
-> kører, så det er mest for sjov — men det er en god måde at prøve **Piskel** første gang.
+> **GØR DETTE**
+>
+> Vil du tegne dine egne pile? Vælg **+ Add object** → **New object from scratch** →
+> **Sprite** → **Edit with Piskel**. Tegn pilen, gem den, og kald objekterne `Left_Arrow`
+> og `Right_Arrow`.
+{: .lesson-action}
+
+> **VIDEN**
+>
+> Pilene bliver skjult, når spillet kører. Du kan prøve Piskel for sjov.
+{: .lesson-info}
 
 ---
 
 ## Opgave 2 – FJENDER: Byg patruljen op
 
-1. Træk **`Monster`** ind på scenen, oven på en platform.
-2. Træk **`Left_Arrow`** ind, så den står ved platformens **venstre** ende.
-3. Træk **`Right_Arrow`** ind, så den står ved platformens **højre** ende.
+> **GØR DETTE**
+>
+> 1. Træk `Monster` ind på en platform.
+> 2. Sæt `Left_Arrow` ved platformens venstre ende.
+> 3. Sæt `Right_Arrow` ved højre ende.
+> 4. Sæt pilene oven på platformen, i samme højde som monsteret.
+{: .lesson-action}
 
-Sørg for, at pilene står **oven på platformen**, i samme højde som monsteret — ellers rører
-monsteret dem aldrig.
+> **VIDEN**
+>
+> Så kan monsteret røre pilene og vende om.
+{: .lesson-info}
 
-> 💡 **Smart trick:** Når patruljen virker, kan du markere monsteret og begge pile (hold
-> **Shift** nede, og klik på dem én ad gangen), holde **Ctrl** nede og trække. Så får du en
-> hel ny patrulje på en anden platform.
+> **GØR DETTE**
+>
+> Vil du lave en kopi af hele patruljen? Hold **Shift** nede, og vælg monsteret og begge
+> pile. Hold så **Ctrl** nede, og træk dem til en anden platform.
+{: .lesson-action}
 
 ---
 
 ## Opgave 3 – FJENDER: Giv monsteret en hukommelse
 
-Monsteret skal huske, hvilken vej det går. Det gør vi med en objekt-variabel.
+> **VIDEN**
+>
+> Monsteret skal huske, hvilken vej det går. Det gør en objekt-variabel.
+{: .lesson-info}
 
-1. **Dobbeltklik på `Monster`** i **Objects**-panelet.
-2. Vælg fanen **Variables** øverst.
-3. Tryk **+ Add a variable**.
+> **GØR DETTE**
+>
+> 1. Dobbeltklik på `Monster` i **Objects**.
+> 2. Vælg fanen **Variables** **(1)**.
+> 3. Vælg **+ Add a variable** **(2)**.
+{: .lesson-action}
 
 ![Fanen Variables på Monster med teksten Add your first object variable](images/03-object-variables.png)
 
-4. Udfyld linjen:
-   - **Navn**: `GoingRight`
-   - **Type**: **Boolean** (skift fra Number)
-   - **Værdi**: **False**
-5. Tryk **Apply**.
+> **GØR DETTE**
+>
+> Udfyld felterne:
+> - **Name** **(1)**: `GoingRight`
+> - **Type** **(2)**: **Boolean**
+> - **Value** **(3)**: **False**
+>
+> Vælg **Apply**.
+{: .lesson-action}
 
 ![Objekt-variablen GoingRight med typen Boolean og værdien False](images/04-boolean-variable.png)
 
@@ -100,109 +136,164 @@ Monsteret skal huske, hvilken vej det går. Det gør vi med en objekt-variabel.
 
 ## Opgave 4 – FJENDER: Få monsteret til at gå
 
-Åbn fanen **(Events)**.
+> **GØR DETTE**
+>
+> Åbn fanen **(Events)**.
+{: .lesson-action}
 
 ### Skjul pilene
 
-Find dit event **At the beginning of the scene** fra sidste lektion. Tilføj **to actions**
-til det:
+> **GØR DETTE**
+>
+> Find eventet **At the beginning of the scene**. Tilføj to actions:
+> - `Left_Arrow` → søg efter `hide` → **Hide**
+> - `Right_Arrow` → søg efter `hide` → **Hide**
+{: .lesson-action}
 
-- `Left_Arrow` → søg efter `hide` → **Hide**
-- `Right_Arrow` → søg efter `hide` → **Hide**
-
-Nu er vendepunkterne usynlige, når spillet kører — men de virker stadig.
+> **VIDEN**
+>
+> Pilene er nu skjult, når spillet kører. De virker stadig som vendepunkter.
+{: .lesson-info}
 
 ### Monsteret går til højre
 
-1. Lav et nyt event.
-2. **+ Add condition** → `Monster` → søg efter `variable` → **Object variable value**.
-3. Skriv `GoingRight` i feltet **Variable**, og vælg den i listen.
-4. Boksen skifter til **Check if the value is** med **True** og **False**. Vælg **True**.
-   Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Lav et nyt event.
+> 2. Vælg **+ Add condition**. Vælg `Monster`, søg efter `variable`, og vælg **Object
+>    variable value**.
+> 3. I feltet **Variable** vælger du `GoingRight`.
+> 4. Vælg **True** **(1)** under **Check if the value is**, og vælg **Ok**.
+{: .lesson-action}
 
 ![Conditionen med True og False i stedet for et tal](images/05-boolean-condition.png)
 
-> 💡 Læg mærke til, at boksen selv fandt ud af, at `GoingRight` er en **boolean**. Havde det
-> været et tal, havde den bedt om et tal at sammenligne med.
+> **VIDEN**
+>
+> GDevelop viser **True** og **False**, fordi `GoingRight` er en Boolean. En talvariabel
+> ville vise tal.
+{: .lesson-info}
 
-5. **+ Add action** → `Monster` → søg efter `force` → **Add a force**.
-6. Sæt **Speed on X axis** til `80` og **Speed on Y axis** til `0`.
-7. Vælg **Instant** (ikke Permanent). Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add action**. Vælg `Monster`, søg efter `force`, og vælg **Add a force**.
+> 2. Vælg **Instant** **(1)**, ikke **Permanent**.
+> 3. Vælg **Ok**.
+{: .lesson-action}
 
 ![Actionen Add a force med forklaringen på Instant og Permanent](images/06-add-force.png)
 
-> 💡 **Instant** skubber kun i ét billede — så skal der skubbes igen. Det er præcis, hvad vi
-> vil have, når conditionen er sand hele tiden. **Permanent** skubber for evigt, indtil man
-> siger stop, og det ville få monsteret til at accelerere ud i det uendelige.
+> **VIDEN**
+>
+> **Instant** giver et lille skub hver gang eventet kører. **Permanent** bliver ved med at
+> skubbe og gør monsteret hurtigere og hurtigere.
+{: .lesson-info}
+
+> **GØR DETTE**
+>
+> Sæt **Speed on X axis** til `80` **(1)** og **Speed on Y axis** til `0` **(2)**.
+{: .lesson-action}
 
 ![Kræfterne udfyldt med 80 og 0](images/07-force-values.png)
 
 ### Monsteret går til venstre
 
-Lav præcis det samme event én gang til, men med to ændringer:
+> **GØR DETTE**
+>
+> Lav samme event igen. Denne gang vælger du:
+>
+> | Felt | Vælg |
+> |---|---|
+> | `GoingRight` | **False** |
+> | **Speed on X axis** | `-80` |
+> | **Speed on Y axis** | `0` |
+{: .lesson-action}
 
-| | Højre | Venstre |
-|---|---|---|
-| Condition: `GoingRight` er | **True** | **False** |
-| **Speed on X axis** | `80` | `-80` |
-
-Et **minus** foran farten betyder "den anden vej".
+> **VIDEN**
+>
+> Minustegnet foran `80` får monsteret til at gå den anden vej.
+{: .lesson-info}
 
 ---
 
 ## Opgave 5 – FJENDER: Få monsteret til at vende om
 
-To events mere — ét for hver pil.
+> **VIDEN**
+>
+> Monsteret skal have ét event for hver pil, så det kan vende om begge veje.
+{: .lesson-info}
 
-1. Lav et nyt event.
-2. **+ Add condition** → `Monster` → søg efter `collision` → **Collision**.
-   I feltet **Object** skriver du `Right_Arrow` og vælger den. Tryk **Ok**.
-3. **+ Add action** → `Monster` → søg efter `variable` →
-   **Change object variable value**.
-4. Skriv `GoingRight` i **Variable**, og vælg den. I **Value** vælger du **set to false**.
-   Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Lav et nyt event.
+> 2. Tilføj en **Collision** condition for `Monster` og `Right_Arrow`.
+> 3. Tilføj **Change object variable value** for `Monster`.
+> 4. Vælg `GoingRight`. Sæt **Value** til **set to false** **(1)**, og vælg **Ok**.
+{: .lesson-action}
 
 ![Actionen der sætter en boolean med set to true, set to false og toggle](images/08-set-boolean.png)
 
-5. **+ Add action** → `Monster` → søg efter `flip` → **Flip the object horizontally** →
-   **Activate flipping: Yes**. Tryk **Ok**.
+> **GØR DETTE**
+>
+> Tilføj **Flip the object horizontally**. Sæt **Activate flipping** til **Yes**, og vælg
+> **Ok**.
+{: .lesson-action}
 
-Og så det spejlvendte event:
+> **GØR DETTE**
+>
+> Lav et event for `Left_Arrow`:
+> 1. Condition: `Monster` rører `Left_Arrow`.
+> 2. Sæt `GoingRight` til **true**.
+> 3. Vend monsteret med **Flip the object horizontally**. Sæt **Activate flipping** til
+>    **No**.
+{: .lesson-action}
 
-| Event | Condition | Actions |
-|---|---|---|
-| Rører **Right_Arrow** | `Monster` in collision with `Right_Arrow` | `GoingRight` → **set to false**<br>Flip horizontally: **Yes** |
-| Rører **Left_Arrow** | `Monster` in collision with `Left_Arrow` | `GoingRight` → **set to true**<br>Flip horizontally: **No** |
-
-> 💡 Vender monsteret den forkerte vej, så byt om på **Yes** og **No** i de to Flip-actions.
-> Det afhænger af, hvilken vej figuren kigger i forvejen.
+> **VIDEN**
+>
+> Hvis monsteret vender forkert, så byt om på **Yes** og **No**. Det afhænger af, hvilken vej
+> figuren kiggede fra start.
+{: .lesson-info}
 
 ---
 
 ## Opgave 6 – FJENDER: Hop på monsteret
 
-Nu skal helten kunne besejre monsteret ved at lande oven på det.
+> **VIDEN**
+>
+> Helten skal kunne besejre monsteret ved at lande oven på det.
+{: .lesson-info}
 
-1. Lav et nyt event.
-2. **+ Add condition** → `Red_hero` → `collision` → **Collision** → **Object**: `Monster`.
-3. **+ Add condition** igen → `Red_hero` → søg efter `falling` → **Is falling**.
-4. **+ Add action** → `Monster` → søg efter `delete` → **Delete the object**.
+> **GØR DETTE**
+>
+> 1. Lav et nyt event.
+> 2. Tilføj en **Collision** condition for `Red_hero` og `Monster`.
+> 3. Tilføj conditionen **Is falling** for `Red_hero`.
+> 4. Tilføj actionen **Delete the object** for `Monster`.
+{: .lesson-action}
 
-De **to** conditions sammen er hele tricket: helten skal både **røre** monsteret **og**
-være på vej **nedad**. Løber han ind i det fra siden, sker der ingenting.
+> **VIDEN**
+>
+> Begge conditions skal passe: Helten skal røre monsteret og være på vej ned. Hvis han løber
+> ind fra siden, sker der ikke noget.
+{: .lesson-info}
 
 ---
 
 ## Hele koden samlet
 
-| # | Conditions (HVIS) | Actions (SÅ) |
-|---|---|---|
-| 1 | **At the beginning of the scene** | Hide `Left_Arrow`<br>Hide `Right_Arrow` |
-| 2 | `GoingRight` of `Monster` is **true** | Add to `Monster` an **instant** force of **80** on X, **0** on Y |
-| 3 | `GoingRight` of `Monster` is **false** | Add to `Monster` an **instant** force of **-80** on X, **0** on Y |
-| 4 | `Monster` in collision with `Right_Arrow` | `GoingRight` → **set to false**<br>Flip horizontally `Monster`: **yes** |
-| 5 | `Monster` in collision with `Left_Arrow` | `GoingRight` → **set to true**<br>Flip horizontally `Monster`: **no** |
-| 6 | `Red_hero` in collision with `Monster`<br>`Red_hero` **is falling** | Delete `Monster` |
+> **VIDEN**
+>
+> Her er events fra denne lektion:
+>
+> | # | Conditions (HVIS) | Actions (SÅ) |
+> |---|---|---|
+> | 1 | **At the beginning of the scene** | Hide `Left_Arrow` og `Right_Arrow` |
+> | 2 | `GoingRight` på `Monster` er **true** | Skub `Monster` mod højre |
+> | 3 | `GoingRight` på `Monster` er **false** | Skub `Monster` mod venstre |
+> | 4 | `Monster` rører `Right_Arrow` | Sæt `GoingRight` til false; vend figuren |
+> | 5 | `Monster` rører `Left_Arrow` | Sæt `GoingRight` til true; vend figuren |
+> | 6 | `Red_hero` rører `Monster` og **is falling** | Slet `Monster` |
+{: .lesson-info}
 
 ![Den færdige Events-side med alle events fra lektion 3, 4 og 5](images/09-finished-events.png)
 
@@ -210,30 +301,47 @@ være på vej **nedad**. Løber han ind i det fra siden, sker der ingenting.
 
 ## Prøv spillet! 🎮
 
-Tryk **Preview**:
+> **GØR DETTE**
+>
+> Vælg **Preview**, og prøv at følge monsteret.
+{: .lesson-action}
 
-- Monsteret **går frem og tilbage** mellem de to usynlige pile
-- Det **vender ansigtet** den rigtige vej
-- Hopper du **oven på** det, **forsvinder** det
-- Løber du ind i det fra siden, sker der (endnu) ingenting
+> **VIDEN**
+>
+> Monsteret skal gå mellem pilene og vende om. Hop oven på det for at fjerne det. Løb du ind
+> fra siden, sker der ikke noget endnu.
+{: .lesson-info}
 
-Husk **Ctrl + S**.
+> **GØR DETTE**
+>
+> Gem med **Ctrl + S**.
+{: .lesson-action}
 
-> 💡 **Hvorfor sker der ikke noget, når man løber ind i monsteret?** Fordi helten skal kunne
-> **dø** — og så skal spillet vise en **You Lose**-skærm. Den scene har vi ikke lavet endnu.
-> Det kommer i ADVANCED. Indtil da er monsteret harmløst fra siden.
+> **VIDEN**
+>
+> Senere laver du en **You Lose**-skærm. Så bliver monsteret farligt, hvis helten rammer det
+> fra siden.
+{: .lesson-info}
 
 ---
 
 ## Du er færdig med FJENDER ✅
 
-- [ ] `Left_Arrow` og `Right_Arrow` står i hver sin ende af platformen
-- [ ] Begge bliver **skjult**, når spillet starter
-- [ ] `Monster` har objekt-variablen `GoingRight` af typen **Boolean**
-- [ ] Monsteret går frem og tilbage helt af sig selv
-- [ ] Monsteret forsvinder, når du hopper oven på det
+> **VIDEN**
+>
+> Du er klar til næste lektion, når:
+>
+> - `Left_Arrow` og `Right_Arrow` står i hver sin ende af platformen.
+> - Pilene skjules, når spillet starter.
+> - `Monster` har objekt-variablen `GoingRight` af typen **Boolean**.
+> - Monsteret går frem og tilbage.
+> - Monsteret forsvinder, når du hopper oven på det.
+{: .lesson-info}
 
-**Næste gang** laver vi **flere scener**: en startmenu og en **You Win**-skærm.
+> **VIDEN**
+>
+> Næste gang laver du flere scener: en startmenu og en **You Win**-skærm.
+{: .lesson-info}
 
 ---
 
@@ -241,16 +349,20 @@ Husk **Ctrl + S**.
 
 | Problem | Løsning |
 |---|---|
-| Monsteret står helt stille | Tjek at `GoingRight` er en **Boolean**, og at de to force-events bruger **True** og **False**. |
-| Monsteret farer ud af skærmen | Du har valgt **Permanent** i stedet for **Instant**. |
-| Monsteret vender aldrig om | Pilene står nok ikke i samme højde som monsteret, så de rører aldrig hinanden. Flyt dem ned på platformen. |
-| Monsteret ryster på stedet | Pilene står for tæt på hinanden, eller oven i monsteret. Flyt dem længere ud mod enderne. |
-| Monsteret går baglæns | Byt om på **Yes** og **No** i de to Flip-actions. |
-| Jeg kan ikke se pilene i editoren | De er kun skjult, **når spillet kører**. I editoren kan du altid se dem. |
-| Monsteret dør, når jeg bare rører det | Du mangler conditionen **Is falling** på helten. |
-| `Right-Arrow` kom med to gange | Højreklik på det ekstra objekt i **Objects**-panelet, og vælg **Delete**. |
+| Monsteret står helt stille | **GØR DETTE:** Tjek at `GoingRight` er en **Boolean**, og at force-events bruger **True** og **False**. |
+| Monsteret farer ud af skærmen | **GØR DETTE:** Vælg **Instant** i stedet for **Permanent**. |
+| Monsteret vender aldrig om | **GØR DETTE:** Sæt pilene ned på platformen, i samme højde som monsteret. |
+| Monsteret ryster på stedet | **GØR DETTE:** Flyt pilene længere fra monsteret og tættere på platformens ender. |
+| Monsteret går baglæns | **GØR DETTE:** Byt om på **Yes** og **No** i Flip-actions. |
+| Jeg kan ikke se pilene i editoren | **VIDEN:** Pilene er kun skjult, når spillet kører. |
+| Monsteret dør, når jeg bare rører det | **GØR DETTE:** Tilføj conditionen **Is falling** for helten. |
+| `Right_Arrow` kom med to gange | **GØR DETTE:** Højreklik på det ekstra objekt i **Objects**, og vælg **Delete**. |
+{: .lesson-help}
 
 ---
 
-Opgaverne bygger på det oprindelige GDevelop-forløb fra
-[mom2day.dk/gdevelop-middel-fjender](https://mom2day.dk/gdevelop-middel-fjender). 🙏
+> **VIDEN**
+>
+> Opgaverne bygger på det oprindelige GDevelop-forløb fra
+> [mom2day.dk/gdevelop-middel-fjender](https://mom2day.dk/gdevelop-middel-fjender).
+{: .lesson-info}

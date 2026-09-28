@@ -1,152 +1,187 @@
 # OPGAVER TIL GDevelop – ADVANCED – DOOR
 
-To ting i denne lektion.
-
-Først retter vi den fejl, du fik i CAMERA: **scoren glider ud af skærmen**, når helten
-løber. Løsningen heder et **lag**.
-
-Så bygger vi en **dør** for enden af banen. Den åbner kun, hvis du har samlet nok mønter —
-og hvis du ikke har, får du det at vide.
-
-> 🟡 **Om billederne:** de gule kasser viser, hvor du skal klikke — eller hvad der er nyt.
+> **VIDEN**
+>
+> Først flytter du scoren, så den bliver på skærmen, når kameraet flytter sig. Så laver du en
+> dør, der kun åbner, hvis du har nok mønter.
+>
+> Knapperne står på engelsk. Vi skriver deres navne, som de står på skærmen. Bokse med hel
+> kant er **GØR DETTE**. Bokse med stiplet kant er **VIDEN**. Gule felter viser, hvor du
+> skal klikke, eller hvad der er nyt. Tallene ved felterne passer til tallene i teksten.
+{: .lesson-info}
 
 ---
 
 ## Hvad er et lag?
 
-Forestil dig, at dit spil er tegnet på flere **gennemsigtige plastikark**, der ligger oven
-på hinanden. Hvert ark er et **lag** (**layer**).
-
-Indtil nu har alt ligget på det samme ark: **Base layer**. Og da du bad kameraet følge
-helten, flyttede du hele arket — også scoren.
-
-Tricket er, at **hvert lag har sit eget kamera**. Laver du et nyt lag og lægger scoren
-derover, står den helt stille, uanset hvor kameraet på **Base layer** flytter sig.
-
-Sådan laver alle spil deres point, liv og beskeder.
+> **VIDEN**
+>
+> Et **lag** (**layer**) er som et gennemsigtigt ark oven på spillet. `Base layer` holder
+> banen og figurerne. Når kameraet flytter sig, flytter alt på det lag sig også.
+>
+> Scoren og beskederne skal være på et andet lag, som bliver på skærmen.
+{: .lesson-info}
 
 ---
 
 ## Opgave 1 – DOOR: Lav et GUI-lag, så scoren står stille
 
-1. Åbn scenen **`Game`**.
-2. Tryk på **lag-ikonet** (de tre stakkede ark) oppe til højre. Så åbner **Layers**-panelet
-   nede i højre hjørne ①.
-3. Tryk på **+** øverst i panelet.
-4. Der kommer et nyt lag **over** **Base layer**, og navnet kan skrives med det samme.
-   Skriv `GUI`, og tryk **Enter**.
+> **GØR DETTE**
+>
+> 1. Åbn scenen `Game`.
+> 2. Vælg lag-ikonet **(1)** øverst til højre. Panelet **Layers** åbner nederst til højre.
+> 3. Vælg **+** øverst i panelet.
+> 4. Skriv `GUI`, og tryk **Enter**.
+{: .lesson-action}
 
 ![Layers-panelet med laget GUI oven over Base layer](images/01-layers-gui.png)
 
-5. Klik på **Score: 0**-teksten ude på scenen.
-6. I **Properties** til venstre er der en lille lag-vælger ① — der står **Base layer**.
-   Klik på den, og vælg **GUI**.
+> **GØR DETTE**
+>
+> 1. Vælg teksten **Score: 0** på scenen.
+> 2. Find lag-vælgeren **(1)** i **Properties** til venstre. Vælg **GUI**.
+{: .lesson-action}
 
 ![Instansen ScoreText hvor lag-vælgeren er sat til GUI](images/02-instance-layer.png)
 
-**Tryk Preview og prøv det!** Løb til højre. Nu bliver **Score** stående i hjørnet. 🎉
+> **GØR DETTE**
+>
+> Vælg **Preview**, og løb til højre.
+{: .lesson-action}
 
-> 💡 **GUI** betyder *Graphical User Interface* — altså alt det, der hører til **skærmen** i
-> stedet for til **banen**. Point, liv, beskeder og knapper hører til der.
-
-> 💡 Rækkefølgen i **Layers**-panelet er, hvad der ligger **øverst**. `GUI` står over
-> `Base layer`, så scoren bliver tegnet oven på spillet — ikke bag ved.
+> **VIDEN**
+>
+> `GUI` betyder det, der hører til skærmen. Point, liv, beskeder og knapper kan ligge der.
+> Laget øverst bliver vist oven på lagene under det.
+{: .lesson-info}
 
 ---
 
 ## Opgave 2 – DOOR: Sæt døren op
 
-1. Skriv `Door` i **Search objects** i **Objects**-panelet, så du kan finde den.
-2. **Træk `Door` ind på scenen** — helt ude til højre for enden af din bane, så den står
-   på jorden ①.
-3. Døren er kæmpestor. Klik på den, og skriv i **Properties**:
-   - **W**: `140`
-   - **H**: `160`
+> **GØR DETTE**
+>
+> 1. Skriv `Door` i **Search objects** under **Objects**.
+> 2. Træk `Door` ud på scenen for enden af banen, på jorden **(1)**.
+> 3. Vælg døren. Sæt **W** til `140` og **H** til `160` i **Properties**.
+{: .lesson-action}
 
-   Du kan også bare trække i de små firkanter i hjørnerne.
-
-![Game-scenen med døren for enden af banen og beskeden You need more coins](images/03-scene-with-door.png)
-
-> 💡 Du behøver **ikke** rode med collision masks. GDevelop laver dem selv — ligesom da du
-> lærte om dem i BEGYNDER.
+> **VIDEN**
+>
+> Du behøver ikke ændre collision mask. GDevelop laver den selv.
+{: .lesson-info}
 
 ---
 
 ## Opgave 3 – DOOR: Lav beskeden
 
-Nu skal spilleren kunne få at vide, at der mangler mønter.
+> **VIDEN**
+>
+> Beskeden fortæller spilleren, at der mangler mønter.
+{: .lesson-info}
 
-1. Tryk **+ Add object** → **New object from scratch** → **Text**.
-2. Udfyld:
-   - **Object name**: `MoreCoins`
-   - **Size**: `40`
-   - **Initial text to display**: `You need more coins!`
-3. Tryk **Apply**.
-4. Klik på `MoreCoins` i **Objects**-panelet, og sæt **Color** i **Properties** til
-   `204;0;0` — en kraftig rød, så man kan se den på den lyse baggrund.
-5. Træk den ind på scenen, midt på skærmen ②.
-6. **Vigtigt:** sæt den på laget **GUI** — helt som du gjorde med scoren.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add object** → **New object from scratch** → **Text**.
+> 2. Udfyld felterne:
+>    - **Object name**: `MoreCoins`
+>    - **Size**: `40`
+>    - **Initial text to display**: `You need more coins!`
+> 3. Vælg **Apply**.
+> 4. Vælg `MoreCoins` i **Objects**. Sæt **Color** til `204;0;0`.
+> 5. Træk teksten ind midt på skærmen **(2)**.
+> 6. Sæt tekstens lag til **GUI**, som du gjorde med scoren.
+{: .lesson-action}
 
-> ⚠️ Glemmer du **GUI**, glider beskeden ud af skærmen sammen med banen. Så står den et
-> tilfældigt sted, når spilleren når hen til døren.
+![Game-scenen med døren for enden af banen og beskeden You need more coins](images/03-scene-with-door.png)
+
+> **VIDEN**
+>
+> Hvis beskeden ikke er på **GUI**, flytter kameraet den sammen med banen.
+{: .lesson-info}
 
 ---
 
 ## Opgave 4 – DOOR: Kod døren
 
-**Tæl først dine mønter!** Hvor mange `Coin` har du trukket ind på scenen? Det tal skal du
-bruge fire steder. På billederne er der `3`.
-
-Åbn fanen **Game (Events)**.
+> **GØR DETTE**
+>
+> Tæl dine `Coin` på scenen. Skriv tallet ned. Du skal bruge det i tre events. Billederne
+> viser `3`. Åbn derefter fanen **Game (Events)**.
+{: .lesson-action}
 
 ### a) Skjul beskeden, når banen starter
 
-Find dit **At the beginning of the scene**-event, og tilføj **én action** til det:
-
-- `MoreCoins` → søg efter `hide` → **Hide**
+> **GØR DETTE**
+>
+> Find eventet **At the beginning of the scene**. Tilføj actionen:
+>
+> - `MoreCoins` → søg efter `hide` → **Hide**
+{: .lesson-action}
 
 ### b) Døren åbner, hvis du har nok mønter
 
-1. Tryk **+ Add a new event** nederst.
-2. **+ Add condition** → `Red_hero` → `collision` → **Collision** → **Object**: `Door`.
-3. **+ Add condition** → søg efter `variable value` i det **øverste** søgefelt →
-   vælg **Variable value**.
-4. Udfyld ①:
-   - **Variable**: `Score` — GDevelop foreslår den selv, så du bare kan klikke
-   - **Sign of the test**: **≥ (greater or equal to)**
-   - **Value to compare**: dit møntantal
-5. Tryk **Ok**.
+> **GØR DETTE**
+>
+> 1. Vælg **+ Add a new event** nederst.
+> 2. Vælg **+ Add condition**. Vælg `Red_hero`, søg efter `collision`, og vælg **Collision**.
+>    Sæt **Object** til `Door`.
+> 3. Tilføj en condition mere. Søg efter `variable value` i det øverste søgefelt, og vælg
+>    **Variable value**.
+> 4. Udfyld felterne **(1)**:
+>    - **Variable**: `Score`
+>    - **Sign of the test**: **≥ (greater or equal to)**
+>    - **Value to compare**: Dit møntantal
+> 5. Vælg **Ok**.
+{: .lesson-action}
 
 ![Conditionen Variable value med Score, tegnet greater or equal og tallet 3](images/04-variable-condition.png)
 
-6. **+ Add action** → søg efter `change to scene` → **Change the scene** →
-   **Name of the new scene**: **You Win**.
+> **GØR DETTE**
+>
+> Tilføj en action: Søg efter `change to scene`, vælg **Change the scene**, og sæt **Name of
+> the new scene** til `You Win`.
+{: .lesson-action}
 
-> 💡 Du skriver bare `Score`. GDevelop finder selv ud af, at det er din **globale**
-> variabel — du behøver ikke fortælle den det.
+> **VIDEN**
+>
+> GDevelop finder den globale variabel `Score` ud fra navnet.
+{: .lesson-info}
 
 ### c) Beskeden, hvis du ikke har nok
 
-Lav et nyt event med de samme to conditions, men to ændringer:
+> **GØR DETTE**
+>
+> Lav et nyt event med de samme to conditions. Sæt **Sign of the test** til **<**. Tilføj
+> actionen `MoreCoins` → **Show**.
+{: .lesson-action}
 
-| | Døren åbner | Beskeden vises |
-|---|---|---|
-| **Sign of the test** | **≥** | **<** |
-| Action | Change the scene: **You Win** | `MoreCoins` → **Show** |
+> **VIDEN**
+>
+> Døren åbner i det første event, når du har nok mønter. Dette event viser beskeden, når du
+> har for få.
+{: .lesson-info}
 
 ### d) Og væk med beskeden igen
 
-Et sidste event — denne gang **kun én** condition:
+> **GØR DETTE**
+>
+> Lav et sidste event med én condition: **Variable value**, `Score` **≥** dit møntantal.
+> Tilføj actionen `MoreCoins` → **Hide**.
+{: .lesson-action}
 
-- **Variable value**: `Score` **≥** dit møntantal
-- Action: `MoreCoins` → **Hide**
-
-Uden det ville beskeden blive stående, selv efter du har samlet de sidste mønter.
+> **VIDEN**
+>
+> Så forsvinder beskeden, når du har samlet nok mønter.
+{: .lesson-info}
 
 ### e) Ryd op
 
-Marker dit første dør-event, og tryk **Shift + C**. Skriv `Døren og You Win` i den gule
-bjælke — ligesom i CAMERA.
+> **GØR DETTE**
+>
+> Vælg det første dør-event, og tryk **Shift + C**. Skriv `Døren og You Win` i den gule
+> bjælke.
+{: .lesson-action}
 
 ![De tre nye events under kommentaren Døren og You Win](images/05-door-events.png)
 
@@ -154,44 +189,57 @@ bjælke — ligesom i CAMERA.
 
 ## Hele koden samlet
 
-| # | Conditions (HVIS) | Actions (SÅ) |
-|---|---|---|
-| 1 | **At the beginning of the scene** *(det gamle event)* | … + **Hide** `MoreCoins` |
-| 2 | `Red_hero` **is in collision with** `Door`<br>`Score` **≥** `3` | Change to scene `"You Win"` |
-| 3 | `Red_hero` **is in collision with** `Door`<br>`Score` **<** `3` | **Show** `MoreCoins` |
-| 4 | `Score` **≥** `3` | **Hide** `MoreCoins` |
+> **VIDEN**
+>
+> | # | Conditions (HVIS) | Actions (SÅ) |
+> |---|---|---|
+> | 1 | **At the beginning of the scene** *(det gamle event)* | … + **Hide** `MoreCoins` |
+> | 2 | `Red_hero` **is in collision with** `Door`<br>`Score` **≥** `3` | Change to scene `"You Win"` |
+> | 3 | `Red_hero` **is in collision with** `Door`<br>`Score` **<** `3` | **Show** `MoreCoins` |
+> | 4 | `Score` **≥** `3` | **Hide** `MoreCoins` |
+{: .lesson-info}
 
 ---
 
 ## Prøv spillet! 🎮
 
-Tryk **Preview**, klik **Start**:
+> **GØR DETTE**
+>
+> 1. Vælg **Preview**, og vælg **Start**.
+> 2. Gå direkte til døren uden at samle mønter.
+> 3. Gå tilbage, saml alle mønterne, og gå hen til døren igen.
+> 4. Gem med **Ctrl + S**.
+{: .lesson-action}
 
-1. **Løb direkte hen til døren** uden at samle noget → **You need more coins!** står midt
-   på skærmen 🔴
-2. Løb tilbage og saml **alle** mønterne → beskeden **forsvinder** af sig selv
-3. Gå hen til døren igen → **You Win!!** 🏆
+> **VIDEN**
+>
+> Uden nok mønter ser du **You need more coins!**. Når du har samlet nok, forsvinder
+> beskeden. Når du går til døren igen, vinder du. Scoren bliver på skærmen.
+{: .lesson-info}
 
-Og læg mærke til, at **Score** nu bliver stående i hjørnet hele vejen.
-
-Husk **Ctrl + S**.
-
-> 💡 Beskeden bliver stående, indtil du har nok mønter — også hvis du går væk fra døren.
-> Det er faktisk meget praktisk: så kan man huske, hvad man mangler.
+> **VIDEN**
+>
+> Beskeden bliver stående, også hvis du går væk fra døren. Den forsvinder, når du har nok
+> mønter.
+{: .lesson-info}
 
 ---
 
 ## Du er færdig med DOOR ✅
 
-- [ ] Der er et lag, der heder **`GUI`**, over **Base layer**
-- [ ] `ScoreText` er på **GUI** og står stille, når kameraet flytter sig
-- [ ] Der står en **`Door`** for enden af banen
-- [ ] `MoreCoins` er på **GUI** og er skjult, når banen starter
-- [ ] Døren skifter til **You Win**, hvis du har nok mønter
-- [ ] Beskeden kommer, hvis du ikke har — og forsvinder, når du har
-
-**Næste gang** laver vi **liv**: tre hjerter i hjørnet, så du kan tåle at blive ramt et par
-gange, før det er slut.
+> **VIDEN**
+>
+> Du er klar til næste lektion, når:
+>
+> - `GUI` ligger over `Base layer`.
+> - `ScoreText` er på `GUI` og bliver på skærmen.
+> - `Door` står for enden af banen.
+> - `MoreCoins` er på `GUI` og skjult, når banen starter.
+> - Døren åbner, når du har nok mønter.
+> - Beskeden vises, når du mangler mønter, og forsvinder, når du har nok.
+>
+> Næste gang laver du tre liv med hjerter.
+{: .lesson-info}
 
 ---
 
@@ -199,18 +247,22 @@ gange, før det er slut.
 
 | Problem | Løsning |
 |---|---|
-| Scoren glider stadig ud af skærmen | Du har sat **objektet** på GUI, men glemt **instansen** på scenen. Klik på teksten *ude på scenen*, og skift laget der. |
-| Jeg kan ikke finde lag-vælgeren | Du skal klikke på selve teksten **ude på scenen** — ikke på navnet i **Objects**-panelet. |
-| Jeg kan ikke se Layers-panelet | Tryk på lag-ikonet oppe til højre i værktøjslinjen. |
-| Beskeden er der hele tiden | Du mangler **Hide** `MoreCoins` i **At the beginning of the scene**. |
-| Beskeden kommer aldrig | Tjek at tegnet i event 3 er **<** og ikke **≥**. |
-| Døren åbner altid | Tjek **Value to compare** i event 2. Står der `0`, er den altid opfyldt. |
-| Døren åbner aldrig | Du kræver flere mønter, end der er i banen. Tæl dine `Coin` igen. |
-| Jeg kan gå igennem døren | Døren er ikke en platform — den er kun til at røre ved. Det er meningen. |
-| Beskeden står et sært sted i spillet | Den er ikke på **GUI**. Sæt laget på instansen. |
-| Jeg kan ikke finde conditionen | Søg på `variable value` i det **øverste** søgefelt. Den heder **Variable value** — ikke noget med "global". |
+| Scoren glider stadig ud af skærmen | **GØR DETTE:** Vælg teksten på scenen. Sæt dens lag til `GUI`. |
+| Jeg kan ikke finde lag-vælgeren | **GØR DETTE:** Vælg teksten på scenen, ikke navnet i **Objects**. |
+| Jeg kan ikke se Layers-panelet | **GØR DETTE:** Vælg lag-ikonet øverst til højre. |
+| Beskeden er der hele tiden | **GØR DETTE:** Tilføj **Hide** `MoreCoins` til **At the beginning of the scene**. |
+| Beskeden kommer aldrig | **GØR DETTE:** Sæt tegnet i event 3 til **<**. |
+| Døren åbner altid | **GØR DETTE:** Tjek **Value to compare** i event 2. Brug dit møntantal, ikke `0`. |
+| Døren åbner aldrig | **GØR DETTE:** Tæl dine `Coin`, og brug det rigtige tal i conditionen. |
+| Jeg kan gå gennem døren | **VIDEN:** Det er meningen. Døren åbner ved berøring; den er ikke en platform. |
+| Beskeden står et sært sted | **GØR DETTE:** Sæt beskedens lag til `GUI`. |
+| Jeg kan ikke finde conditionen | **GØR DETTE:** Søg efter `variable value` i det øverste søgefelt. |
+{: .lesson-help}
 
 ---
 
-Opgaverne bygger på det oprindelige GDevelop-forløb fra
-[mom2day.dk/gdevelop-advanced-door](https://mom2day.dk/gdevelop-advanced-door). 🙏
+> **VIDEN**
+>
+> Opgaverne bygger på det oprindelige GDevelop-forløb fra
+> [mom2day.dk/gdevelop-advanced-door](https://mom2day.dk/gdevelop-advanced-door).
+{: .lesson-info}

@@ -1,102 +1,139 @@
 # OPGAVER TIL GDevelop – BEGYNDER
 
-I sidste lektion hentede du alle figurerne. De ligger klar i **Objects**-panelet, men de kan
-ingenting endnu — de er bare billeder.
-
-I denne lektion giver vi dem **behaviors**, og til sidst kan din helt **løbe og hoppe på
-platformene**. Uden at du skriver en eneste linje kode.
-
-Knapperne i GDevelop står på engelsk, så vi skriver deres navne præcis som de står på
-skærmen — fx **Apply** — mens forklaringerne er på dansk.
-
-> 🟡 **Om billederne:** de gule kasser viser, hvor du skal klikke. Tallene i de gule cirkler
-> passer til tallene i teksten.
+> **VIDEN**
+>
+> Sidst hentede du spillets figurer. Nu giver du dem evner, så helten kan løbe og hoppe på
+> platformene. Du behøver ikke skrive kode.
+>
+> Knapperne i GDevelop står på engelsk. Vi skriver deres navne, som de står på skærmen.
+> Boks med hel kant betyder **GØR DETTE**. Boks med stiplet kant betyder **VIDEN**.
+> Gule felter på billeder viser, hvor du skal klikke. Tallene i gule cirkler passer til
+> tallene i teksten.
+{: .lesson-info}
 
 ---
 
 ## To ord du skal kende
 
-**Behavior** — en færdiglavet evne, du kan hænge på et objekt. I stedet for selv at
-programmere tyngdekraft, at løbe og at hoppe, giver vi helten behavioren
-**Platformer character**, og så kan han det hele.
-
-**Collision mask** — den usynlige form, spillet bruger til at mærke, om to ting rører
-hinanden. Den skal helst følge figurens krop og ikke den tomme luft rundt om.
-**Den gode nyhed: GDevelop laver den selv.** Du skal som regel slet ikke røre den.
+> **VIDEN**
+>
+> **Behavior** er en evne, du giver en figur. Vi bruger **Platformer character**, så helten
+> kan gå og hoppe.
+>
+> **Collision mask** er den usynlige form, spillet bruger til at mærke, om ting rører
+> hinanden. GDevelop laver den som regel selv.
+{: .lesson-info}
 
 ---
 
 ## Opgave 1 – BEGYNDER: Åbn dit projekt igen
 
-1. Åbn GDevelop, og vælg **Create** i menuen til venstre.
-2. Find **Platformspil1** på listen under **Games**.
-3. Tryk på **Open**.
-4. Dobbeltklik på din scene, så du kan se den.
+> **GØR DETTE**
+>
+> 1. Åbn GDevelop, og vælg **Create** i menuen til venstre.
+> 2. Find **Platformspil1** under **Games**.
+> 3. Vælg **Open**.
+> 4. Dobbeltklik på din scene.
+{: .lesson-action}
 
-> 💡 Har du allerede projektet åbent i en fane foroven, kan du bare klikke på fanen.
+> **VIDEN**
+>
+> Hvis projektet allerede er åbent, kan du springe de første trin over.
+{: .lesson-info}
 
 ---
 
 ## Opgave 2 – BEGYNDER: Kig på heltens collision mask
 
-1. Find **`Red_hero`** i **Objects**-panelet til højre, og **dobbeltklik** på den.
-2. Boksen **Edit Red_hero** åbner på fanen **Properties**.
-
-Læg mærke til, at `Red_hero` allerede har flere animationer: **Idle** (står stille),
-**Run** (løber) og **Jump** (hopper). Dem bruger vi senere.
+> **GØR DETTE**
+>
+> 1. Find **`Red_hero`** i **Objects** til højre, og dobbeltklik på den.
+> 2. Vælg **Edit collision masks** **(1)** nederst til venstre.
+{: .lesson-action}
 
 ![Boksen Edit Red_hero med fanerne og animationerne Idle og Run](images/01-object-editor.png)
 
-3. Tryk på **Edit collision masks** nederst til venstre.
-4. Der står **"Automatic collision mask activated."**
+> **VIDEN**
+>
+> `Red_hero` har allerede animationerne **Idle** (står stille), **Run** (løber) og **Jump**
+> (hopper). Dem bruger vi senere.
+{: .lesson-info}
 
-Det betyder, at GDevelop **selv** har lagt masken tæt om heltens krop. Kig på den røde
-ramme om figuren — den passer allerede.
+> **GØR DETTE**
+>
+> 1. Find teksten **"Automatic collision mask activated."** **(1)**.
+> 2. Luk boksen med **✕** øverst. Du skal ikke ændre noget.
+{: .lesson-action}
 
 ![Collision mask-editoren hvor der står Automatic collision mask activated](images/02-collision-auto.png)
 
-5. **Du skal ikke lave om på noget.** Luk boksen igen med krydset **✕** oppe i hjørnet.
-
-> 💡 **Hvorfor er det vigtigt?** Hvis masken var en stor firkant om hele billedet, ville
-> helten se ud til at svæve over jorden og blive ramt af fjender, der er langt væk. Før i
-> tiden skulle man rette den i hånden. Det klarer GDevelop nu selv.
+> **VIDEN**
+>
+> GDevelop har lagt den røde maske tæt om heltens krop. En stor firkant kan få helten til at
+> se ud, som om han svæver, eller blive ramt af ting langt væk. Den automatiske maske passer
+> allerede, så lad den være.
+{: .lesson-info}
 
 ### Hvis du selv vil bestemme formen
 
-Trykker du på **Use a custom collision mask**, får du en firkant med fire punkter
-(**Quadrilateral**), som du kan trække i. Du kan tilføje flere punkter med **+ Add a vertex**.
+> **VIDEN**
+>
+> Du kan selv ændre formen, men det behøver du ikke. En **Quadrilateral** er en firkant med
+> fire punkter.
+{: .lesson-info}
 
 ![Collision mask-editoren med en Quadrilateral og punkternes X- og Y-værdier](images/03-collision-custom.png)
 
-> ⚠️ **Pas på skraldespanden!** Sletter du den firkant, du lige har lavet, får du **ikke**
-> den automatiske maske tilbage — du får i stedet en stor firkant om hele billedet, og så
-> svæver helten. Fortryder du, så tryk **Cancel** nederst i **Edit Red_hero** og svar
-> **Cancel** til *"Cancel your changes?"*. Så er alt, som det var.
+> **GØR DETTE**
+>
+> Hvis du vil ændre masken:
+> 1. Vælg **Use a custom collision mask**.
+> 2. Træk i punkterne. Vælg **+ Add a vertex**, hvis du vil have flere punkter.
+{: .lesson-action}
+
+> **VIDEN**
+>
+> Hvis du sletter firkanten, kommer den automatiske maske ikke tilbage. **Cancel** lukker
+> **Edit Red_hero** uden at gemme ændringerne.
+{: .lesson-info}
+
+> **GØR DETTE**
+>
+> Hvis du vil fortryde: vælg **Cancel** i **Edit Red_hero**, og vælg **Cancel** igen, når
+> GDevelop spørger, om du vil annullere ændringerne.
+{: .lesson-action}
 
 ---
 
 ## Opgave 3 – BEGYNDER: Giv Red_hero evnen til at gå og hoppe
 
-1. Du er stadig inde i **Edit Red_hero**. Vælg fanen **Behaviors** øverst.
-2. Der står *"Add your first behavior"*. Tryk på **+ Add a behavior**.
+> **GØR DETTE**
+>
+> 1. Vælg fanen **Behaviors** **(1)** øverst.
+> 2. Vælg **+ Add a behavior** **(2)**.
+{: .lesson-action}
 
 ![Fanen Behaviors med teksten Add your first behavior og knappen Add a behavior](images/04-behaviors-empty.png)
 
-3. Nu kommer en liste med alle de evner, du kan vælge.
-4. Vælg **Platformer character** — der står *"Jump and run on platforms."* under den.
+> **GØR DETTE**
+>
+> Vælg **Platformer character** **(1)** — der står *"Jump and run on platforms."* under
+> navnet.
+{: .lesson-action}
 
-> ⚠️ **Pas på:** lige over den står der **Platform**. De to hedder næsten det samme, men er
-> ikke det samme! **Platformer character** er *den der løber*. **Platform** er *det man
-> løber på*. Din helt skal have **Platformer character**.
+> **VIDEN**
+>
+> **Platformer character** er figuren, der løber. **Platform** er det, figuren løber på.
+{: .lesson-info}
 
 ![Listen over behaviors med Platform øverst og Platformer character under den](images/05-behavior-list.png)
 
-5. Nu kan du se behaviorens indstillinger: **Gravity**, **Jump speed** og et par mere.
-   **Du behøver ikke at ændre noget.**
-6. Læg mærke til feltet **Disable default keyboard controls**. Det skal **ikke** have et
-   hak. Når det er tomt, virker piletasterne af sig selv — det er derfor, du ikke selv
-   skal programmere styringen endnu.
-7. Tryk **Apply** nederst til højre.
+> **GØR DETTE**
+>
+> 1. Lad **Gravity** og **Jump speed** stå, som de er.
+> 2. Lad **Disable default keyboard controls** **(1)** være tomt.
+> 3. Vælg **Apply** nederst til højre.
+{: .lesson-action}
 
 ![Behaviorens indstillinger med Disable default keyboard controls uden hak, Gravity 1000 og Jump speed 600](images/06-platformer-character.png)
 
@@ -104,89 +141,129 @@ Trykker du på **Use a custom collision mask**, får du en firkant med fire punk
 
 ## Opgave 4 – BEGYNDER: Byg en lille bane
 
-Din helt kan nu løbe og hoppe — men der er ikke noget at løbe på. Det laver vi.
+> **VIDEN**
+>
+> Helten kan nu løbe og hoppe. Nu skal du lave en bane, så han har noget at lande på.
+{: .lesson-info}
 
-1. **Træk `Red_hero` fra Objects-panelet ind på scenen.** Placér den oppe i luften.
-2. **Træk `Platform_1` ind på scenen**, et stykke under helten.
-3. Træk **to eller tre platforme mere** ind, i forskellig højde, så der er noget at hoppe
-   op på.
+> **GØR DETTE**
+>
+> 1. Træk `Red_hero` fra **Objects** ind på scenen. Sæt helten oppe i luften.
+> 2. Træk `Platform_1` ind under helten.
+> 3. Træk to eller tre platforme mere ind. Sæt dem i forskellige højder.
+{: .lesson-action}
 
-> 💡 Du kan kopiere en platform hurtigt: klik på den, hold **Ctrl** nede, og træk. Så får
-> du en kopi.
+> **GØR DETTE**
+>
+> Vil du lave en kopi af en platform? Klik på den, hold **Ctrl** nede, og træk.
+{: .lesson-action}
 
 ---
 
 ## Opgave 5 – BEGYNDER: Gør platformene til rigtige platforme
 
-Lige nu falder helten lige gennem platformene, for spillet ved ikke, at man kan stå på dem.
+> **VIDEN**
+>
+> Helten falder gennem platformene, indtil du fortæller spillet, at han kan stå på dem.
+{: .lesson-info}
 
-1. **Dobbeltklik på `Platform_1`** i **Objects**-panelet.
-2. Vælg fanen **Behaviors**, og tryk på **+ Add a behavior**.
-3. Vælg denne gang **Platform** — den øverste, med teksten
-   *"Flag objects as being platforms which characters can run on."*
-4. I feltet **Type** står der nu **NormalPlatform — Platform**.
+> **GØR DETTE**
+>
+> 1. Dobbeltklik på `Platform_1` i **Objects**.
+> 2. Vælg **Behaviors** → **+ Add a behavior**.
+> 3. Vælg **Platform** — den med teksten *"Flag objects as being platforms which
+>    characters can run on."*
+> 4. Find feltet **Type** **(1)**. Det står på **NormalPlatform — Platform**.
+{: .lesson-action}
 
 ![Platform-behavioren med Type sat til NormalPlatform](images/07-platform-behavior.png)
 
-5. Klik på **Type**, og vælg **Jumpthru platform** i stedet.
-6. **HUSK:** fjern hakket i **Ledges can be grabbed**. Ellers hænger din helt fast i
-   kanterne, når han hopper forbi.
-7. Tryk **Apply**.
+> **GØR DETTE**
+>
+> 1. I **Type** **(1)** skal du vælge **Jumpthru platform**.
+> 2. Fjern hakket ved **Ledges can be grabbed** **(2)**.
+> 3. Vælg **Apply**.
+{: .lesson-action}
 
 ![Platform-behavioren med Jumpthru platform valgt og Ledges can be grabbed uden hak](images/08-jumpthru.png)
 
-> 💡 **Hvorfor Jumpthru platform?** Fordi man så kan hoppe *op igennem* en platform
-> nedefra, men stadig lande oven på den. Det er sådan de fleste platformspil føles.
-
-> 💡 I samme **Type**-menu findes også **Ladder**. Den skal `Ladder` have senere i kurset,
-> så helten kan klatre op ad stigen.
+> **VIDEN**
+>
+> Med **Jumpthru platform** kan helten hoppe op gennem en platform og lande oven på den.
+> **Ladder** findes også i menuen. Den skal bruges på stigen senere.
+{: .lesson-info}
 
 ---
 
 ## Opgave 6 – BEGYNDER: Gør det samme med de andre platforme
 
-Nu skal `Platform_2`, `Platform_3` og `Corner_platform` have præcis samme behandling:
+> **GØR DETTE**
+>
+> Gør dette for `Platform_2`, `Platform_3` og `Corner_platform`:
+> 1. Dobbeltklik på objektet.
+> 2. Vælg **Behaviors** → **+ Add a behavior** → **Platform**.
+> 3. Vælg **Jumpthru platform** i **Type**.
+> 4. Fjern hakket ved **Ledges can be grabbed**.
+> 5. Vælg **Apply**.
+{: .lesson-action}
 
-- Dobbeltklik på objektet
-- **Behaviors** → **+ Add a behavior** → **Platform**
-- **Type: Jumpthru platform**
-- Fjern hakket i **Ledges can be grabbed**
-- **Apply**
+> **VIDEN**
+>
+> Alle kopier af samme objekt deler indstillinger. Derfor skal indstillingen kun ændres på
+> selve objektet.
+{: .lesson-info}
 
-Du behøver kun at gøre det **én gang per objekt** — ikke for hver kopi, du har trukket ind
-på scenen. Alle kopier af `Platform_1` deler samme indstillinger.
-
-> 💡 Der er en genvej: åbn `Platform_1`, tryk **Copy all behaviors**, åbn så `Platform_2`
-> og tryk **Paste**. Så slipper du for at sætte det hele op igen.
+> **GØR DETTE**
+>
+> Vil du kopiere indstillinger i stedet? Åbn `Platform_1`, vælg **Copy all behaviors**.
+> Åbn så `Platform_2`, og vælg **Paste**.
+{: .lesson-action}
 
 ---
 
 ## Prøv spillet! 🎮
 
-Tryk på **Preview** øverst.
+> **GØR DETTE**
+>
+> Vælg **Preview** øverst.
+{: .lesson-action}
 
-Nu skulle du kunne:
+> **VIDEN**
+>
+> I spillet kan du nu:
+>
+> - Gå til siden med **venstre** og **højre piletast**.
+> - Hoppe med **pil op**.
+> - Lande på platformene i stedet for at falde igennem.
+>
+> Dit første spil virker! 🎉
+{: .lesson-info}
 
-- Gå til siderne med **venstre** og **højre piletast**
-- Hoppe med **pil op**
-- Lande oven på platformene i stedet for at falde igennem
-
-Det er dit første spil, der virker. 🎉
-
-Husk at gemme med **Ctrl + S**.
+> **GØR DETTE**
+>
+> Gem med **Ctrl + S**.
+{: .lesson-action}
 
 ---
 
 ## Du er færdig med BEGYNDER ✅
 
-- [ ] `Red_hero` har behavioren **Platformer character**
-- [ ] **Disable default keyboard controls** har **ikke** et hak
-- [ ] Der er en helt og nogle platforme på scenen
-- [ ] Platformene har behavioren **Platform** med **Jumpthru platform**
-- [ ] Hakket i **Ledges can be grabbed** er fjernet
-- [ ] Helten kan løbe og hoppe i **Preview**
+> **VIDEN**
+>
+> Du er klar til næste lektion, når alt dette passer:
+>
+> - `Red_hero` har **Platformer character**.
+> - **Disable default keyboard controls** er tomt.
+> - Der er en helt og platforme på scenen.
+> - Platformene har **Platform** med **Jumpthru platform**.
+> - **Ledges can be grabbed** er slået fra.
+> - Helten kan løbe og hoppe i **Preview**.
+{: .lesson-info}
 
-**Næste gang** koder vi selv med *events*, så du bestemmer alt, hvad der sker i spillet.
+> **VIDEN**
+>
+> Næste gang bruger du *events* til at bestemme, hvad der sker i spillet.
+{: .lesson-info}
 
 ---
 
@@ -194,15 +271,19 @@ Husk at gemme med **Ctrl + S**.
 
 | Problem | Løsning |
 |---|---|
-| Helten falder gennem platformene | Platformene mangler behavioren **Platform**. Eller helten har fået **Platform** i stedet for **Platformer character**. |
-| Piletasterne gør ingenting | Tjek at **Disable default keyboard controls** er **tomt**. Klik også én gang inde i Preview-vinduet, så tastaturet lytter til spillet. |
-| Helten svæver over jorden | Du har nok slettet den automatiske collision mask. Åbn **Edit collision masks** og se, om der står *"Automatic collision mask activated"*. Gør der ikke det, så tryk **Cancel** og prøv igen. |
-| Helten hænger fast i kanten af en platform | Hakket i **Ledges can be grabbed** er ikke fjernet. |
-| Helten falder ned i det uendelige | Der er ingen platform under ham. Træk en ind, eller flyt helten oven over en. |
-| Jeg kan ikke finde `RedHero` | Den hedder `Red_hero` med en understreg. |
-| Jeg kan ikke se mine ændringer | Du har måske glemt at trykke **Apply**, før du lukkede boksen. |
+| Helten falder gennem platformene | **GØR DETTE:** Giv platformene **Platform**. Giv helten **Platformer character**. |
+| Piletasterne gør ingenting | **GØR DETTE:** Lad **Disable default keyboard controls** stå tomt. Klik også én gang i Preview-vinduet. |
+| Helten svæver over jorden | **GØR DETTE:** Åbn **Edit collision masks**. Hvis den automatiske maske mangler, vælg **Cancel**. |
+| Helten hænger fast i kanten af en platform | **GØR DETTE:** Fjern hakket ved **Ledges can be grabbed**. |
+| Helten falder ned i det uendelige | **GØR DETTE:** Sæt en platform under helten, eller flyt helten over en platform. |
+| Jeg kan ikke finde `RedHero` | **GØR DETTE:** Søg efter `Red_hero` med understreg. |
+| Jeg kan ikke se mine ændringer | **GØR DETTE:** Vælg **Apply**, før du lukker boksen. |
+{: .lesson-help}
 
 ---
 
-Opgaverne bygger på det oprindelige GDevelop-forløb fra
-[mom2day.dk/gdevelop-begynder](https://mom2day.dk/gdevelop-begynder). 🙏
+> **VIDEN**
+>
+> Opgaverne bygger på det oprindelige GDevelop-forløb fra
+> [mom2day.dk/gdevelop-begynder](https://mom2day.dk/gdevelop-begynder).
+{: .lesson-info}

@@ -204,6 +204,25 @@ body {
 }
 .content blockquote p { margin: 0.35em 0; }
 
+/* Lesson action and info panels */
+.content blockquote.lesson-action {
+  border: 2px solid var(--accent);
+  border-left-width: 8px;
+  background: #f1f7ff;
+  color: var(--ink);
+}
+.content blockquote.lesson-action > p:first-child { margin-top: 0; }
+.content blockquote.lesson-action > p:first-child strong {
+  letter-spacing: 0.04em;
+}
+
+.content blockquote.lesson-info {
+  border: 1px dashed #8c959f;
+  border-left: 4px dashed #8c959f;
+  background: #f6f8fa;
+  color: var(--ink-soft);
+}
+
 .content table {
   display: block;
   overflow-x: auto;
@@ -219,6 +238,14 @@ body {
   vertical-align: top;
 }
 .content th { background: var(--bg-soft); font-weight: 600; }
+.content table.lesson-help td:first-child {
+  color: var(--ink-soft);
+  background: #f6f8fa;
+}
+.content table.lesson-help td:last-child {
+  border-left: 4px solid var(--accent);
+  background: #f1f7ff;
+}
 
 .content hr { border: 0; border-top: 1px solid var(--line); margin: 2.4em 0; }
 
@@ -342,4 +369,41 @@ body {
   .content h1 { font-size: 25px; }
   .pager { flex-direction: column; }
   .pager .next { text-align: left; margin-left: 0; }
+}
+
+/* Print the lesson without app navigation or screen-only effects */
+@media print {
+  @page { margin: 16mm; }
+
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .layout { display: block; }
+  .sidebar, .nav-toggle, .pager, .lightbox { display: none !important; }
+  .content { max-width: none; padding: 0; }
+  .content h1, .content h2, .content h3 { break-after: avoid; }
+  .content blockquote.lesson-action,
+  .content blockquote.lesson-info {
+    color: #000;
+    background: transparent;
+    break-inside: avoid;
+  }
+  .content blockquote.lesson-action {
+    border: 2px solid #000;
+    border-left-width: 8px;
+  }
+  .content blockquote.lesson-info {
+    border: 1px dashed #555;
+    border-left: 4px dashed #555;
+  }
+  .content img {
+    max-width: 100%;
+    border-color: #777;
+    break-inside: avoid;
+  }
+  .content table { display: table; width: 100%; overflow: visible; }
+  .content table.lesson-help td:first-child { color: #333; background: transparent; }
+  .content table.lesson-help td:last-child {
+    border-left: 3px solid #000;
+    background: transparent;
+  }
+  .content a { color: #000; }
 }
