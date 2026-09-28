@@ -33,3 +33,6 @@ defaults:
 exclude:
   - tools
   - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor
