@@ -105,7 +105,7 @@
       dir: 06-fjender
       title: FJENDER
       subtitle: Fjendeskibe der skyder igen
-      ready: false
+      ready: true
 
     - num: 7
       dir: 07-boelger
