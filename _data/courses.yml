@@ -117,7 +117,7 @@
       dir: 08-menu-highscore
       title: MENU OG HIGHSCORE
       subtitle: Scener og en highscore der gemmes
-      ready: false
+      ready: true
 
     - num: 9
       dir: 09-boss
