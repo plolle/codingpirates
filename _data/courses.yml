@@ -65,3 +65,62 @@
       title: ADVANCED – LIV
       subtitle: Tre hjerter og en scene-variabel
       ready: true
+
+- dir: rumspil
+  title: GDevelop
+  subtitle: Byg dit eget rumspil
+  icon: 🚀
+  lessons:
+    - num: 1
+      dir: 01-intro
+      title: INTRO
+      subtitle: Nyt projekt og et skib der flyver
+      ready: false
+
+    - num: 2
+      dir: 02-skyd
+      title: SKYD!
+      subtitle: Laserskud og en timer
+      ready: false
+
+    - num: 3
+      dir: 03-asteroider
+      title: ASTEROIDER
+      subtitle: Tilfældige tal og point
+      ready: false
+
+    - num: 4
+      dir: 04-boom-og-lyd
+      title: BOOM OG LYD
+      subtitle: Partikler, lyd og musik
+      ready: false
+
+    - num: 5
+      dir: 05-liv
+      title: LIV OG HEALTH BAR
+      subtitle: Skade, health bar og Game Over
+      ready: false
+
+    - num: 6
+      dir: 06-fjender
+      title: FJENDER
+      subtitle: Fjendeskibe der skyder igen
+      ready: false
+
+    - num: 7
+      dir: 07-boelger
+      title: BØLGER
+      subtitle: Sværere og sværere
+      ready: false
+
+    - num: 8
+      dir: 08-menu-highscore
+      title: MENU OG HIGHSCORE
+      subtitle: Scener og en highscore der gemmes
+      ready: false
+
+    - num: 9
+      dir: 09-boss
+      title: EKSTRA – BOSS
+      subtitle: Power-ups og en stor boss
+      ready: false
