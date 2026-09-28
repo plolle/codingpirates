@@ -93,7 +93,7 @@
       dir: 04-boom-og-lyd
       title: BOOM OG LYD
       subtitle: Partikler, lyd og musik
-      ready: false
+      ready: true
 
     - num: 5
       dir: 05-liv
