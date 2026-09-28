@@ -171,7 +171,7 @@ sprænger asteroiderne i en sky af gnister, laseren siger *piu*, og der kommer m
 > Den gule boks **(1)** siger, at musik først kan spille, når spilleren har trykket på en
 > tast eller klikket. Sådan virker browsere. Hører du ikke musikken med det samme, så
 > starter den, når du begynder at spille. I lektionen om menuen får spillet en
-> startknap, og så spiller musikken fra start.
+> startmenu, hvor du trykker ENTER — og så spiller musikken fra start.
 {: .lesson-info}
 
 ## Opgave 6 – BOOM OG LYD: Plads til pointene

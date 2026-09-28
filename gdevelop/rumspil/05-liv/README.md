@@ -251,7 +251,7 @@ er det **GAME OVER**.
 > - Asteroiderne bliver ved med at flyve — **bag** teksten.
 >
 > Du starter forfra ved at lukke vinduet og vælge **Preview** igen. I lektionen om menuen
-> får spillet en rigtig **Game Over**-skærm med en knap til at prøve igen.
+> kan du trykke ENTER for at prøve igen.
 {: .lesson-info}
 
 ## Ekstra: Flere liv, eller færre
