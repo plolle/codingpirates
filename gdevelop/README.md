@@ -11,7 +11,7 @@ får du et point". Du skal ikke skrive kode, men du lærer at tænke som en prog
 | Kursus | Lektioner | Det bygger du |
 |---|---|---|
 | 🎮 **[Byg dit eget platformspil](platformspil/)** | 10 | En helt, der løber og hopper, mønter, fjender, en låst dør, liv og flere baner |
-| 🚀 **[Byg dit eget rumspil](rumspil/)** | 9 (på vej) | Et rumskib, der skyder asteroider og fjender i bølger, med lyd, eksplosioner og highscore |
+| 🚀 **[Byg dit eget rumspil](rumspil/)** | 9 | Et rumskib, der skyder asteroider og fjender i bølger, med lyd, eksplosioner, highscore og en boss |
 
 **Er du ny?** Så start med platformspillet. Det forklarer GDevelop fra bunden, og rumspillet
 bygger videre på de ting, du lærer der.
