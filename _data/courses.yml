@@ -124,3 +124,50 @@
       title: EKSTRA – BOSS
       subtitle: Power-ups og en stor boss
       ready: true
+
+- dir: gdevelop/flyvespil
+  title: GDevelop
+  subtitle: Byg dit eget flyvespil
+  icon: 🐦
+  lessons:
+    - num: 1
+      dir: 01-intro
+      title: INTRO
+      subtitle: Pixel art og en fugl der flyver
+      ready: true
+
+    - num: 2
+      dir: 02-flyv
+      title: FLYV!
+      subtitle: Tyngdekraft og vingeslag
+      ready: false
+
+    - num: 3
+      dir: 03-soejler
+      title: SØJLER
+      subtitle: Forhindringer i tilfældig højde
+      ready: false
+
+    - num: 4
+      dir: 04-point-game-over
+      title: POINT OG GAME OVER
+      subtitle: Tæl point, og prøv igen
+      ready: false
+
+    - num: 5
+      dir: 05-fart-og-lyd
+      title: FART OG LYD
+      subtitle: Hurtigere og hurtigere, og lyd
+      ready: false
+
+    - num: 6
+      dir: 06-menu-highscore
+      title: MENU, HIGHSCORE OG DEL
+      subtitle: Highscore og dit spil på nettet
+      ready: false
+
+    - num: 7
+      dir: 07-frugt-medaljer
+      title: EKSTRA – FRUGT OG MEDALJER
+      subtitle: Saml frugt, og vind medaljer
+      ready: false
