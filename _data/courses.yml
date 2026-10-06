@@ -164,7 +164,7 @@
       dir: 06-menu-highscore
       title: MENU, HIGHSCORE OG DEL
       subtitle: Highscore og dit spil på nettet
-      ready: false
+      ready: true
 
     - num: 7
       dir: 07-frugt-medaljer
