@@ -12,7 +12,7 @@ får du et point". Du skal ikke skrive kode, men du lærer at tænke som en prog
 |---|---|---|
 | 🎮 **[Byg dit eget platformspil](platformspil/)** | 10 | En helt, der løber og hopper, mønter, fjender, en låst dør, liv og flere baner |
 | 🚀 **[Byg dit eget rumspil](rumspil/)** | 9 | Et rumskib, der skyder asteroider og fjender i bølger, med lyd, eksplosioner, highscore og en boss |
-| 🐦 **[Byg dit eget flyvespil](flyvespil/)** | 7 (4 klar) | En fugl, der flyver gennem huller mellem stolper, med point, highscore og dit spil på nettet |
+| 🐦 **[Byg dit eget flyvespil](flyvespil/)** | 7 (5 klar) | En fugl, der flyver gennem huller mellem stolper, med point, highscore og dit spil på nettet |
 
 **Er du ny?** Så start med platformspillet. Det forklarer GDevelop fra bunden, og rumspillet
 bygger videre på de ting, du lærer der. Flyvespillet er kort og kan også tages som det første.

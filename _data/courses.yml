@@ -158,7 +158,7 @@
       dir: 05-fart-og-lyd
       title: FART OG LYD
       subtitle: Hurtigere og hurtigere, og lyd
-      ready: false
+      ready: true
 
     - num: 6
       dir: 06-menu-highscore
