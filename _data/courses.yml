@@ -143,10 +143,10 @@
       ready: true
 
     - num: 3
-      dir: 03-soejler
-      title: SØJLER
+      dir: 03-stolper
+      title: STOLPER
       subtitle: Forhindringer i tilfældig højde
-      ready: false
+      ready: true
 
     - num: 4
       dir: 04-point-game-over

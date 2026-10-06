@@ -12,5 +12,5 @@ Undervisningsmateriale til Coding Pirates.
   fjender i bølger, med eksplosioner, lyd og en highscore, der bliver gemt. Tag gerne
   platformspillet først. Ni lektioner, den sidste med power-ups og en stor boss.
 - **[Byg dit eget flyvespil](gdevelop/flyvespil/)** — en fugl, der skal flyve gennem
-  hullerne mellem søjler, med point, highscore og dit spil lagt på nettet. Kort og nemt at
-  gå til. Under udarbejdelse — lektion 1 er klar.
+  hullerne mellem stolper, med point, highscore og dit spil lagt på nettet. Kort og nemt at
+  gå til. Under udarbejdelse — lektion 1–3 er klar.

@@ -1,8 +1,8 @@
 # GDevelop — byg dit eget flyvespil 🐦
 
-Her laver du et spil, hvor en lille fugl skal flyve gennem hullerne mellem søjler. Du
+Her laver du et spil, hvor en lille fugl skal flyve gennem hullerne mellem stolper. Du
 holder den i luften med vingeslag — et tryk på tasten, et klik med musen eller et tryk på
-skærmen. Rammer du en søjle eller jorden, er spillet slut.
+skærmen. Rammer du en stolpe eller jorden, er spillet slut.
 
 Spillet er kort og nemt at gå til, men svært at blive god til. Til sidst lægger du det på
 nettet, så du kan sende det til dine venner og se, om de kan slå din highscore.
@@ -18,8 +18,8 @@ Du behøver **ikke** at kunne programmere i forvejen.
 Et flyvespil med:
 
 - 🐦 En fugl, der falder med tyngdekraft og flyver op, når du trykker
-- 🌳 Søjler, der kommer ind fra højre med et hul i tilfældig højde
-- 🔢 Point for hver søjle, du kommer forbi
+- 🌳 Stolper, der kommer ind fra højre med et hul i tilfældig højde
+- 🔢 Point for hver stolpe, du kommer forbi
 - 💥 **Game Over**, når fuglen rammer noget, og en knap til at prøve igen
 - 🏃 Fart, der stiger, jo længere du kommer, og lyd til det hele
 - 🏆 En startmenu og en highscore, der bliver gemt
@@ -63,11 +63,11 @@ Tag lektionerne i rækkefølge — hver bygger videre på den før.
 | Del | Lektioner | Det handler om |
 |---|---|---|
 | **Kom i gang** | 1–2 | Lav projektet, og hold fuglen i luften med vingeslag |
-| **Selve spillet** | 3–4 | Søjler, point og Game Over |
+| **Selve spillet** | 3–4 | Stolper, point og Game Over |
 | **Gør det færdigt** | 5–6 | Fart og lyd, menu, highscore og dit spil på nettet |
 | **Ekstra** | 7 | Frugter at samle og medaljer |
 
-Lektion 1–2 er klar. De næste lektioner kommer snart.
+Lektion 1–3 er klar. De næste lektioner kommer snart.
 
 ---
 
@@ -77,7 +77,7 @@ Lektion 1–2 er klar. De næste lektioner kommer snart.
 - **Prøv spillet tidligt.** Tryk **Preview** ofte i stedet for at bygge længe i blinde.
 - **Der er ingen dumme fejl.** Går noget i stykker, så fortryd med **Ctrl + Z**, og prøv igen.
 - **Spørg din nabo.** Tit kan man se en andens fejl hurtigere end sin egen.
-- **Byg videre.** Når kurset er slut, er spillet dit. Prøv en anden fugl, andre søjler
+- **Byg videre.** Når kurset er slut, er spillet dit. Prøv en anden fugl, andre stolper
   eller din helt egen grafik.
 
 ---

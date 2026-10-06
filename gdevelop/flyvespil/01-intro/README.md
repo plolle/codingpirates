@@ -88,7 +88,7 @@ sidst flyver fuglen gennem luften, mens baggrunden glider forbi.
 > **VIDEN**
 >
 > Pakken er lavet af **Pixel Frog**, og du må bruge den gratis (CC0). Den har mapper med
-> figurer, fjender, frugter, fælder, baggrunde og jord, som vi kan bygge søjler af.
+> figurer, fjender, frugter, fælder, baggrunde og jord, som vi kan bygge stolper af.
 >
 > Vi henter **ikke** alle 89 på én gang. Så bliver listen med objekter alt for lang. I hver
 > lektion henter vi kun det, vi skal bruge.

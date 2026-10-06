@@ -341,7 +341,7 @@ vipper den med næbbet op, når den flyver op, og ned, når den falder.
 >
 > Lav tyngdekraft gør spillet nemmere og roligere, ligesom på månen. Høj tyngdekraft gør
 > det hurtigt og svært. Find de tal, du synes er sjovest — men husk dem, for i næste
-> lektion skal fuglen igennem hullerne mellem søjlerne.
+> lektion skal fuglen igennem hullerne mellem stolperne.
 {: .lesson-info}
 
 ## Du er færdig med FLYV! ✅
@@ -359,7 +359,7 @@ vipper den med næbbet op, når den flyver op, og ned, når den falder.
 
 > **VIDEN**
 >
-> Næste gang kommer der søjler, som fuglen skal flyve igennem.
+> Næste gang kommer der stolper, som fuglen skal flyve igennem.
 {: .lesson-info}
 
 ## Hvis noget går galt
