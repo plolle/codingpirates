@@ -67,7 +67,8 @@ Tag lektionerne i rækkefølge — hver bygger videre på den før.
 | **Gør det færdigt** | 5–6 | Fart og lyd, menu, highscore og dit spil på nettet |
 | **Ekstra** | 7 | Frugter at samle og medaljer |
 
-Lektion 1–6 er klar. De næste lektioner kommer snart.
+Alle syv lektioner er klar. Er du igennem de første seks, har du et helt spil med menu,
+highscore og et link, du kan dele. Lektion 7 er ekstra, med æbler at fange og medaljer.
 
 ---
 
