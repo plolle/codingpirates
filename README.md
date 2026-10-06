@@ -13,4 +13,4 @@ Undervisningsmateriale til Coding Pirates.
   platformspillet først. Ni lektioner, den sidste med power-ups og en stor boss.
 - **[Byg dit eget flyvespil](gdevelop/flyvespil/)** — en fugl, der skal flyve gennem
   hullerne mellem stolper, med point, highscore og dit spil lagt på nettet. Kort og nemt at
-  gå til. Under udarbejdelse — lektion 1–3 er klar.
+  gå til. Syv lektioner, den sidste med æbler at fange og medaljer.

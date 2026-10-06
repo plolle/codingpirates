@@ -152,22 +152,22 @@
       dir: 04-point-game-over
       title: POINT OG GAME OVER
       subtitle: Tæl point, og prøv igen
-      ready: false
+      ready: true
 
     - num: 5
       dir: 05-fart-og-lyd
       title: FART OG LYD
       subtitle: Hurtigere og hurtigere, og lyd
-      ready: false
+      ready: true
 
     - num: 6
       dir: 06-menu-highscore
       title: MENU, HIGHSCORE OG DEL
       subtitle: Highscore og dit spil på nettet
-      ready: false
+      ready: true
 
     - num: 7
       dir: 07-frugt-medaljer
       title: EKSTRA – FRUGT OG MEDALJER
       subtitle: Saml frugt, og vind medaljer
-      ready: false
+      ready: true
