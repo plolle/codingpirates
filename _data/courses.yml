@@ -140,7 +140,7 @@
       dir: 02-flyv
       title: FLYV!
       subtitle: Tyngdekraft og vingeslag
-      ready: false
+      ready: true
 
     - num: 3
       dir: 03-soejler
