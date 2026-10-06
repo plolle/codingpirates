@@ -152,7 +152,7 @@
       dir: 04-point-game-over
       title: POINT OG GAME OVER
       subtitle: Tæl point, og prøv igen
-      ready: false
+      ready: true
 
     - num: 5
       dir: 05-fart-og-lyd
